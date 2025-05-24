@@ -1,0 +1,614 @@
+fish:
+  - name: Rainbow Trout
+    requirement: roll a 2
+    money: 4
+    reputation: 4
+    rarity: common
+    size: 40
+    color: silver
+    habitat: river
+  - name: Canary Rockfish
+    requirement: roll an even number
+    money: 5
+    reputation: 5
+    rarity: uncommon
+    size: 50
+    color: orange
+    habitat: reef
+  - name: Salmon
+    requirement: roll a 3 or 4
+    money: 6
+    reputation: 6
+    rarity: common
+    size: 70
+    color: silver
+    habitat: river
+  - name: Pufferfish
+    requirement: roll a 2 and a 5
+    money: 3
+    reputation: 3
+    rarity: uncommon
+    size: 30
+    color: yellow
+    habitat: reef
+  - name: Bluefin Tuna
+    requirement: roll a 6
+    money: 15
+    reputation: 15
+    rarity: rare
+    size: 200
+    color: blue
+    habitat: ocean
+  - name: Anglerfish
+    requirement: roll doubles
+    money: 12
+    reputation: 12
+    rarity: rare
+    size: 60
+    color: brown
+    habitat: deep sea
+  - name: Clownfish
+    requirement: roll a 1 or 6
+    money: 4
+    reputation: 4
+    rarity: common
+    size: 15
+    color: orange
+    habitat: reef
+  - name: Swordfish
+    requirement: roll two odd numbers
+    money: 14
+    reputation: 14
+    rarity: rare
+    size: 150
+    color: silver
+    habitat: ocean
+  - name: Goldfish
+    requirement: roll a 1
+    money: 2
+    reputation: 2
+    rarity: common
+    size: 10
+    color: gold
+    habitat: lake
+  - name: Catfish
+    requirement: roll a 3
+    money: 5
+    reputation: 5
+    rarity: common
+    size: 60
+    color: gray
+    habitat: river
+  - name: Stingray
+    requirement: roll two even numbers
+    money: 8
+    reputation: 8
+    rarity: uncommon
+    size: 120
+    color: brown
+    habitat: ocean
+  - name: Mahi Mahi
+    requirement: roll a 5 or 6
+    money: 10
+    reputation: 10
+    rarity: uncommon
+    size: 100
+    color: green
+    habitat: ocean
+  - name: Barracuda
+    requirement: roll a 4 and a 5
+    money: 9
+    reputation: 9
+    rarity: uncommon
+    size: 90
+    color: silver
+    habitat: reef
+  - name: Perch
+    requirement: roll a 2 or 3
+    money: 3
+    reputation: 3
+    rarity: common
+    size: 25
+    color: green
+    habitat: lake
+  - name: Grouper
+    requirement: roll a total of 8
+    money: 11
+    reputation: 11
+    rarity: rare
+    size: 130
+    color: brown
+    habitat: reef
+  - name: Tilapia
+    requirement: roll any even number
+    money: 4
+    reputation: 4
+    rarity: common
+    size: 40
+    color: silver
+    habitat: lake
+  - name: Snapper
+    requirement: roll a 1 and a 4
+    money: 6
+    reputation: 6
+    rarity: uncommon
+    size: 50
+    color: red
+    habitat: reef
+  - name: Halibut
+    requirement: roll a 2 or 6
+    money: 12
+    reputation: 12
+    rarity: rare
+    size: 180
+    color: brown
+    habitat: ocean
+  - name: Eel
+    requirement: roll a 5
+    money: 5
+    reputation: 5
+    rarity: uncommon
+    size: 70
+    color: black
+    habitat: river
+  - name: Minnow
+    requirement: roll a total of 3
+    money: 1
+    reputation: 1
+    rarity: common
+    size: 5
+    color: silver
+    habitat: lake
+  - name: Carp
+    requirement: roll a total of 4
+    money: 3
+    reputation: 3
+    rarity: common
+    size: 60
+    color: gold
+    habitat: lake
+  - name: Herring
+    requirement: roll two numbers that add to 7
+    money: 4
+    reputation: 4
+    rarity: common
+    size: 30
+    color: silver
+    habitat: ocean
+  - name: Flounder
+    requirement: roll two 2s
+    money: 7
+    reputation: 7
+    rarity: uncommon
+    size: 50
+    color: brown
+    habitat: ocean
+  - name: Sardine
+    requirement: roll a total of 6
+    money: 2
+    reputation: 2
+    rarity: common
+    size: 15
+    color: silver
+    habitat: ocean
+  - name: Mackerel
+    requirement: roll two 3s
+    money: 5
+    reputation: 5
+    rarity: common
+    size: 35
+    color: blue
+    habitat: ocean
+  - name: Sea Bass
+    requirement: roll a total of 9
+    money: 6
+    reputation: 6
+    rarity: uncommon
+    size: 60
+    color: black
+    habitat: ocean
+  - name: Cod
+    requirement: roll a total of 5
+    money: 5
+    reputation: 5
+    rarity: common
+    size: 70
+    color: brown
+    habitat: ocean
+  - name: Marlin
+    requirement: roll a total of 10
+    money: 16
+    reputation: 16
+    rarity: rare
+    size: 200
+    color: blue
+    habitat: ocean
+  - name: King Salmon
+    requirement: roll a 6 and a 6
+    money: 14
+    reputation: 14
+    rarity: rare
+    size: 100
+    color: silver
+    habitat: river
+  - name: Whitefish
+    requirement: roll a total of 7
+    money: 4
+    reputation: 4
+    rarity: common
+    size: 45
+    color: white
+    habitat: lake
+  - name: Crappie
+    requirement: roll a 1 and a 2
+    money: 3
+    reputation: 3
+    rarity: common
+    size: 25
+    color: silver
+    habitat: lake
+  - name: Bluegill
+    requirement: roll a total of 11
+    money: 2
+    reputation: 2
+    rarity: common
+    size: 20
+    color: blue
+    habitat: lake
+  - name: Zander
+    requirement: roll two odd numbers
+    money: 7
+    reputation: 7
+    rarity: uncommon
+    size: 60
+    color: green
+    habitat: river
+  - name: Pike
+    requirement: roll a 4
+    money: 9
+    reputation: 9
+    rarity: uncommon
+    size: 90
+    color: green
+    habitat: lake
+  - name: Bream
+    requirement: roll a 1 or 3
+    money: 3
+    reputation: 3
+    rarity: common
+    size: 30
+    color: silver
+    habitat: lake
+
+gear:
+  - name: Old Rod
+    category: Rod
+    cost: 10
+    description: Reroll one die after catching a fish
+  - name: Basic Rod
+    category: Rod
+    cost: 10
+    description: Reroll your lowest die
+  - name: Curved Rod
+    category: Rod
+    cost: 10
+    description: Reroll one die
+  - name: Flexible Rod
+    category: Rod
+    cost: 10
+    description: Reroll two dice
+  - name: Golden Rod
+    category: Rod
+    cost: 10
+    description: Reroll any number of dice
+  - name: Jig
+    category: Lure
+    cost: 10
+    description: Add 1 to your lowest die
+  - name: Spinnerbait
+    category: Lure
+    cost: 10
+    description: If two dice are the same, increase one by 2
+  - name: Spoon
+    category: Lure
+    cost: 10
+    description: Subtract 1 from your highest die
+  - name: Crankbait
+    category: Lure
+    cost: 10
+    description: If two dice are the same, decrease one by 1
+  - name: Buzzbait
+    category: Lure
+    cost: 10
+    description: Add 1 to your highest die
+  - name: Golden bait
+    category: Lure
+    cost: 10
+    description: Increase all dice by 1
+  - name: High-tension line
+    category: Line
+    cost: 10
+    description: Hold one die to use on your next cast
+  - name: Elastic line
+    category: Line
+    cost: 10
+    description: Hold your lowest die
+  - name: Stiff line
+    category: Line
+    cost: 10
+    description: Hold your highest die
+  - name: Braided line
+    category: Line
+    cost: 10
+    description: Hold a 6+
+  - name: Fly line
+    category: Line
+    cost: 10
+    description: Hold two dice
+  - name: Golden line
+    category: Line
+    cost: 10
+    description: Hold any number of dice
+  - name: Electric-powered reel
+    category: Reel
+    cost: 10
+    description: Set one die to a 3
+  - name: Gas-powered reel
+    category: Reel
+    cost: 10
+    description: Change a 6 to any number
+  - name: Well-oiled reel
+    category: Reel
+    cost: 10
+    description: Set one die to a 4
+  - name: Aluminium reel
+    category: Reel
+    cost: 10
+    description: Set one die to a 5
+  - name: Rotary-spool reel
+    category: Reel
+    cost: 10
+    description: Set one die to a 2
+  - name: Centrespin reel
+    category: Reel
+    cost: 10
+    description: Change a 5 to any number
+  - name: Sidecast reel
+    category: Reel
+    cost: 10
+    description: Change a 1 to any number
+  - name: Conventional reel
+    category: Reel
+    cost: 10
+    description: Change a 2 to any number
+  - name: Baitcasting reel
+    category: Reel
+    cost: 10
+    description: Set one die to a 6
+  - name: Fixed-spool reel
+    category: Reel
+    cost: 10
+    description: Set one die to a 1
+  - name: Spinning reel
+    category: Reel
+    cost: 10
+    description: Change a 3 to any number
+  - name: Spincast reel
+    category: Reel
+    cost: 10
+    description: Change a 4 to any number
+  - name: Golden reel
+    category: Reel
+    cost: 10
+    description: Change a die to any number
+  - name: Tackle box
+    category: Accessory
+    cost: 10
+    description: Roll a die with 1, 3, 3, 3, 5, 6
+  - name: Net
+    category: Accessory
+    cost: 10
+    description: Roll a die with 1, 1, 1, 5, 6, 7
+  - name: Fishfinder
+    category: Accessory
+    cost: 10
+    description: Roll a die with 3, 3, 3, 3, 4, 4
+  - name: Spear
+    category: Accessory
+    cost: 10
+    description: Roll a die with 1, 1, 1, 6, 6, 6
+  - name: Trap
+    category: Accessory
+    cost: 10
+    description: Roll a die with 2, 2, 4, 4, 4, 6
+  - name: Slip Bobber
+    category: Accessory
+    cost: 10
+    description: Roll a die with 1, 3, 4, 6, 7, 7
+  - name: Golden Fish Statue
+    category: Accessory
+    cost: 10
+    description: Roll a die with 6, 6, 6, 6, 6, 6
+
+skill:
+  - name: Lucky Cast
+    category: Cast
+    description: Add +1 to all your dice this turn
+  - name: Steady Hands
+    category: Cast
+    description: Set one die to 4 as if you casted it
+  - name: Extra Cast
+    category: Cast
+    description: Roll an extra die this turn
+  - name: Wild Cast
+    category: Cast
+    description: Set one die randomly to 1 or 6 as if you casted it
+  - name: Unlucky Catch
+    category: Disrupt
+    description: Force a player to reroll their highest die
+  - name: Just Say No
+    category: Disrupt
+    description: Nullify the effects of a played action card
+  - name: Scare Off
+    category: Disrupt
+    description: Cancel another player's cast this round
+  - name: Robin Hood
+    category: Disrupt
+    description: Disable one of another player's equipment for a turn
+  - name: Black Market
+    category: Economy
+    description: Sell one fish for triple the price, but lose 5 reputation
+  - name: Double Value
+    category: Economy
+    description: Sell a fish for double
+  - name: Money Steal
+    category: Economy
+    description: Everyone pays you an amount equal to how many fish are in their hand
+  - name: Daily Grant
+    category: Economy
+    description: The player with the fewest fish gains $5
+  - name: Hidden Treasure
+    category: Economy
+    description: Gain $7 if you end the turn with no fish
+  - name: Free Money
+    category: Economy
+    description: Gain $5
+  - name: Hoard Reward
+    category: Economy
+    description: Gain money equal to the number of fish in your hand
+  - name: Sticky Hands
+    category: Economy
+    description: Choose a player; you take $5 from them
+  - name: Lure Swap
+    category: Standard
+    description: Trade one gear with a player of your choice
+  - name: Regulation Raid
+    category: Standard
+    description: All players with more than 3 fish lose one fish
+  - name: Weather Shift
+    category: Standard
+    description: Replace the current event card and draw a new one
+  - name: Habitat Sweep
+    category: Standard
+    description: Refresh all fish from one habitat
+  - name: Regulator Sweep
+    category: Standard
+    description: Refresh the market
+  - name: Outlook Change
+    category: Standard
+    description: Peek at the next event and choose to keep or discard it
+  - name: Lucky Forecast
+    category: Standard
+    description: Choose the event card for the next round
+  - name: Conservationist
+    category: Standard
+    description: Gain double reputation when donating a fish
+  - name: Fish Steal
+    category: Standard
+    description: Take a random fish from a chosen player's hand
+  - name: Borrow Gear
+    category: Standard
+    description: Steal a gear from another player
+
+event:
+  - name: Low Pressure System
+    category: Weather
+    description: All fish require an extra die (any number) to catch
+  - name: Thunderstorm
+    category: Weather
+    description: Random habitat closure, fish located there are distrubted randomly to other habitats, players currently located there can choose a different habitat to migrate to at the start of their turn
+  - name: Thunderstorm
+    category: Weather
+    description: Each time a fish is drawn, there is a chance for all fish to be refreshed / replaced
+  - name: Sunny
+    category: Weather
+    description: No effect
+  - name: Algal Bloom
+    category: Disaster
+    description: All habitats lose 3 fish
+  - name: Acid Rain
+    category: Disaster
+    description: 50% chance to lose fish after catching, but refunding all dice
+  - name: Raining Cash
+    category: Opportunity
+    description: All fish sell for double price
+  - name: Special Guest
+    category: Opportunity
+    description: All fish sell for double reputation
+  - name: Clearance Sale
+    category: Opportunity
+    description: All items in the market cost $2 less, minimum $1
+  - name: Yellow Fever
+    category: Tournament
+    description: Catch the most number of yellow fish
+  - name: Free For All
+    category: Tournament
+    description: Catch the most number of any fish
+  - name: Largest Catch
+    category: Tournament
+    description: Catch the largest fish
+  - name: Lake Clearance
+    category: Tournament
+    description: Catch the most number of lake fish
+
+quest:
+  - name: Quest 1
+    money: 5
+    reputation: 7
+    description: Catch a sea bream and a pike
+  - name: Quest 2
+    money: 7
+    reputation: 3
+    description: Catch 3 salmon
+  - name: Quest 3
+    money: 7
+    reputation: 3
+    description: Catch 4 gray fish
+  - name: Quest 4
+    money: 7
+    reputation: 3
+    description: Catch 3 lake fish
+  - name: Quest 5
+    money: 7
+    reputation: 3
+    description: Catch 3 ocean fish
+  - name: Quest 6
+    money: 7
+    reputation: 3
+    description: Catch 2 fish smaller than 20 cm
+  - name: Quest 7
+    money: 7
+    reputation: 3
+    description: Catch 2 rare fish
+  - name: Quest 8
+    money: 7
+    reputation: 3
+    description: Catch 2 silver fish
+  - name: Quest 9
+    money: 7
+    reputation: 3
+    description: Catch 3 silver fish
+  - name: Quest 10
+    money: 7
+    reputation: 3
+    description: Catch 2 red fish
+  - name: Quest 11
+    money: 7
+    reputation: 3
+    description: Catch 3 river fish
+  - name: Quest 12
+    money: 7
+    reputation: 3
+    description: Catch 2 orange fish
+  - name: Quest 13
+    money: 7
+    reputation: 3
+    description: Catch 2 gold fish
+  - name: Quest 14
+    money: 7
+    reputation: 3
+    description: Catch 5 common fish
+  - name: Quest 15
+    money: 7
+    reputation: 3
+    description: Catch 2 green fish
