@@ -2,14 +2,7 @@ import random
 import cmd
 
 cards = [
-    {
-        "name": "Rainbow Trout",
-        "requirement": "roll a 2",
-        "money": "3",
-        "reputation": "4",
-        "size": "10",
-        "color": "silver",
-    },
+    {"name": "Rainbow Trout", "requirement": "roll a 2"},
     {"name": "Canary Rockfish", "requirement": "roll an even number"},
     {"name": "Salmon", "requirement": "roll a 3 or 4"},
     {"name": "Pufferfish", "requirement": "roll a 2 and a 5"},
@@ -402,7 +395,7 @@ cards = [
 drawn_cards = []
 
 
-def toString(card):
+def to_string(card):
     return f"{card['name']} ({card['requirement']}) Money: {card['money']}\n    [{card['habitat']}] - {card['size']}cm\n    [{card['rarity'].upper()}] - {card['color']}"
 
 
@@ -420,7 +413,7 @@ class GameShell(cmd.Cmd):
             drawn = random.sample(cards, n)
             print("You drew:")
             for card in drawn:
-                print(f"- {toString(card)}")
+                print(f"- {to_string(card)}")
             drawn_cards.extend(drawn)
         except ValueError:
             print("Usage: draw <number>")
@@ -447,7 +440,7 @@ class GameShell(cmd.Cmd):
     def do_list(self, _):
         "List all cards"
         for idx, card in enumerate(drawn_cards, 1):
-            print(f"{idx}: {toString(card)}")
+            print(f"{idx}: {to_string(card)}")
 
     def do_roll(self, arg):
         "Roll N dice: roll 3"
@@ -456,7 +449,7 @@ class GameShell(cmd.Cmd):
             if n < 1:
                 print("You must roll at least one die.")
                 return
-            rolls = [str(random.randint(1, 6)) for _ in range(arg)]
+            rolls = [str(random.randint(1, 6)) for _ in range(n)]
             print(f"Rolled {', '.join(rolls)}")
         except ValueError:
             print("Usage: roll <number>")
