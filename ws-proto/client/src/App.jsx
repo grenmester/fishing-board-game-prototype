@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { FaCircleUser, FaFish, FaMoneyBill, FaStar } from "react-icons/fa6";
 import {
   GiInvertedDice1,
   GiInvertedDice2,
@@ -12,6 +11,8 @@ import {
 import { IoMdAdd, IoMdClose, IoMdRemove, IoMdSync } from "react-icons/io";
 
 import DebugConsole from "./components/DebugConsole";
+import FishCard from "./components/FishCard";
+import PlayerCard from "./components/PlayerCard";
 
 const diceIcons = [
   GiSquare,
@@ -103,27 +104,12 @@ const App = () => {
         <h2 className="mb-4 text-4xl font-bold text-center">Players</h2>
         <div className="flex flex-wrap gap-4 justify-center">
           {gameState.players.map((player, idx) => (
-            <div
-              className={`flex flex-col gap-y-2 items-center p-4 bg-purple-300 rounded-lg ${playerId == idx && "border-2 border-purple-700"}`}
+            <PlayerCard
+              idx={idx}
               key={idx}
-            >
-              <div className="flex gap-4">
-                <div className="flex gap-1 items-center">
-                  <FaStar className="text-yellow-500" />
-                  <span>{player.reputation}</span>
-                </div>
-                <div className="flex gap-1 items-center">
-                  <FaMoneyBill className="text-green-500" />
-                  <span>{player.money}</span>
-                </div>
-                <div className="flex gap-1 items-center">
-                  <FaFish className="text-blue-500" />
-                  <span>{player.hand.length}</span>
-                </div>
-              </div>
-              <FaCircleUser size={48} />
-              <p className="font-bold">Player {idx}</p>
-            </div>
+              player={player}
+              playerId={playerId}
+            />
           ))}
         </div>
       </div>
@@ -204,7 +190,7 @@ const App = () => {
       </div>
       <div className="p-4 w-full max-w-4xl bg-yellow-100 rounded-xl">
         <h2 className="mb-4 text-4xl font-bold text-center">Game State</h2>
-        <pre>{JSON.stringify(gameState, null, 2)}</pre>
+        <pre className="text-xs">{JSON.stringify(gameState, null, 2)}</pre>
       </div>
       {error && (
         <div className="fixed top-4 right-4">
@@ -218,30 +204,5 @@ const App = () => {
     </div>
   );
 };
-
-const FishCard = ({ clickHandler, fish }) => (
-  <div
-    className="flex flex-col items-center p-4 w-40 h-56 bg-cyan-300 rounded-lg"
-    onClick={clickHandler}
-  >
-    <div className="flex gap-x-4 items-center">
-      <div className="flex gap-x-1 items-center">
-        <FaStar />
-        <span>{fish.reputation}</span>
-      </div>
-      <p className="text-sm font-italic">{capitalize(fish.habitat)}</p>
-      <div className="flex gap-x-1 items-center">
-        <FaMoneyBill />
-        <span>{fish.money}</span>
-      </div>
-    </div>
-    <p className="text-xl font-bold">{fish.name}</p>
-    <p className="text-sm">
-      {fish.rarity}, {fish.size} cm
-    </p>
-    <FaFish className="my-4" size={40} />
-    <p>{fish.description}</p>
-  </div>
-);
 
 export default App;
