@@ -2,6 +2,19 @@ import { WebSocketServer } from "ws";
 
 const PORT = 3000;
 
+const getFish = (location) => {
+  return {
+    name: "Fish",
+    habitat: location,
+    money: 1,
+    reputation: 1,
+    rarity: "common",
+    size: 1,
+    color: "silver",
+    description: "Roll a 2 and a 4",
+  };
+};
+
 const broadcast = (message) => {
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
@@ -21,6 +34,7 @@ let gameState = {
   players: [],
   numDice: 1,
   diceRolls: [0],
+  board: {},
 };
 
 wss.on("connection", (ws) => {
@@ -60,6 +74,17 @@ wss.on("connection", (ws) => {
         }
 
         gameInProgress = true;
+        gameState.board = {
+          pier: Array(5)
+            .fill()
+            .map(() => getFish("pier")),
+          lake: Array(5)
+            .fill()
+            .map(() => getFish("lake")),
+          sea: Array(5)
+            .fill()
+            .map(() => getFish("sea")),
+        };
         broadcast({ type: "gameInProgress", gameInProgress });
         break;
       case "addDie":
@@ -84,6 +109,48 @@ wss.on("connection", (ws) => {
         gameState.diceRolls = Array(gameState.numDice)
           .fill()
           .map(() => Math.floor(Math.random() * 6) + 1);
+        break;
+      case "addCard":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't add cards");
+          return;
+        }
+
+        const newFish = getFish(data.location);
+        gameState.board[data.location].push(newFish);
+        break;
+      case "drawCard":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't draw cards");
+          return;
+        }
+
+        const [drawnFish] = gameState.board[data.location].splice(data.idx, 1);
+        gameState.players[ws.playerId].hand.push(drawnFish);
+        gameState.players[ws.playerId].reputation += drawnFish.reputation;
+        break;
+      case "discardCard":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't discard cards");
+          return;
+        }
+
+        gameState.players[ws.playerId].hand.splice(data.idx, 1);
         break;
     }
     broadcast({ type: "gameState", gameState });

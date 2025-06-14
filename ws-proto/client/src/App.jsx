@@ -23,6 +23,13 @@ const diceIcons = [
   GiInvertedDice6,
 ];
 
+const capitalize = (str) =>
+  str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + str.slice(1))
+    .join(" ");
+
 const App = () => {
   const [gameInProgress, setGameInProgress] = useState(false);
   const [playerId, setPlayerId] = useState(-1);
@@ -30,6 +37,7 @@ const App = () => {
     players: [],
     numDice: 1,
     diceRolls: [0],
+    board: {},
   });
   const [error, setError] = useState("");
 
@@ -119,6 +127,50 @@ const App = () => {
           ))}
         </div>
       </div>
+      <div className="p-4 w-full max-w-7xl bg-cyan-100 rounded-xl">
+        <h2 className="mb-4 text-4xl font-bold text-center">Fish</h2>
+        <div className="flex flex-col gap-y-4">
+          {Object.entries(gameState.board).map(([location, fishList]) => (
+            <div className="p-4 bg-cyan-200 rounded-lg" key={location}>
+              <div className="flex flex-wrap gap-4 items-center">
+                <div className="flex flex-col items-center mx-2">
+                  <h3 className="mb-2 text-2xl font-bold text-center">
+                    {capitalize(location)}
+                  </h3>
+                  <button
+                    className="p-2 text-white bg-cyan-500 rounded-full size-fit"
+                    onClick={() => sendMessage({ type: "addCard", location })}
+                  >
+                    <IoMdAdd size={24} />
+                  </button>
+                </div>
+                {fishList.map((fish, idx) => (
+                  <FishCard
+                    clickHandler={() =>
+                      sendMessage({ type: "drawCard", location, idx })
+                    }
+                    fish={fish}
+                    key={`${fish.name}${idx}`}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="p-4 w-full max-w-4xl bg-blue-100 rounded-xl">
+        <h2 className="mb-4 text-4xl font-bold text-center">Hand</h2>
+        <div className="flex flex-wrap gap-4 items-center">
+          {gameState.players[playerId]?.hand.length > 0 &&
+            gameState.players[playerId]?.hand.map((fish, idx) => (
+              <FishCard
+                clickHandler={() => sendMessage({ type: "discardCard", idx })}
+                fish={fish}
+                key={`${fish.name}${idx}`}
+              />
+            ))}
+        </div>
+      </div>
       <div className="p-4 w-full max-w-2xl bg-gray-100 rounded-xl">
         <h2 className="mb-4 text-4xl font-bold text-center">Dice</h2>
         <div className="flex flex-col gap-y-2 items-center">
@@ -166,5 +218,30 @@ const App = () => {
     </div>
   );
 };
+
+const FishCard = ({ clickHandler, fish }) => (
+  <div
+    className="flex flex-col items-center p-4 w-40 h-56 bg-cyan-300 rounded-lg"
+    onClick={clickHandler}
+  >
+    <div className="flex gap-x-4 items-center">
+      <div className="flex gap-x-1 items-center">
+        <FaStar />
+        <span>{fish.reputation}</span>
+      </div>
+      <p className="text-sm font-italic">{capitalize(fish.habitat)}</p>
+      <div className="flex gap-x-1 items-center">
+        <FaMoneyBill />
+        <span>{fish.money}</span>
+      </div>
+    </div>
+    <p className="text-xl font-bold">{fish.name}</p>
+    <p className="text-sm">
+      {fish.rarity}, {fish.size} cm
+    </p>
+    <FaFish className="my-4" size={40} />
+    <p>{fish.description}</p>
+  </div>
+);
 
 export default App;
