@@ -12,6 +12,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
-    "ws": "^8.18.2"
+    "ws": "^8.18.2",
+    "yaml": "^2.8.0"
   }
 }

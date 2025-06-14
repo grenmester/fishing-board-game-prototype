@@ -1,18 +1,27 @@
+import fs from "fs/promises";
 import { WebSocketServer } from "ws";
+import YAML from "yaml";
 
 const PORT = 3000;
 
+const fileContents = await fs.readFile("./data.yaml", "utf8");
+const gameData = YAML.parse(fileContents);
+const fishDeck = {
+  pier: gameData.fish.filter((fish) => fish.habitat === "pier"),
+  lake: gameData.fish.filter((fish) => fish.habitat === "lake"),
+  sea: gameData.fish.filter((fish) => fish.habitat === "sea"),
+};
+
 const getFish = (location) => {
-  return {
-    name: "Fish",
-    habitat: location,
-    money: 1,
-    reputation: 1,
-    rarity: "common",
-    size: 1,
-    color: "silver",
-    description: "Roll a 2 and a 4",
-  };
+  if (fishDeck[location].length === 0) {
+    console.log(`The ${location} deck is empty, refilling cards`);
+    fishDeck[location] = gameData.fish.filter(
+      (fish) => fish.habitat === location,
+    );
+  }
+  const randomIdx = Math.floor(Math.random() * fishDeck[location].length);
+  const [drawnFish] = fishDeck[location].splice(randomIdx, 1);
+  return drawnFish;
 };
 
 const broadcast = (message) => {

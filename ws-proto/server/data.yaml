@@ -1,0 +1,49 @@
+fish:
+  - name: Pier Fish 1
+    habitat: pier
+    money: 1
+    reputation: 1
+    rarity: common
+    size: 1
+    color: silver
+    description: Roll a 2 and a 4
+  - name: Pier Fish 2
+    habitat: pier
+    money: 2
+    reputation: 2
+    rarity: common
+    size: 2
+    color: silver
+    description: Roll a 2 and a 4
+  - name: Lake Fish 1
+    habitat: lake
+    money: 1
+    reputation: 1
+    rarity: common
+    size: 1
+    color: silver
+    description: Roll a 2 and a 4
+  - name: Lake Fish 2
+    habitat: lake
+    money: 2
+    reputation: 2
+    rarity: common
+    size: 2
+    color: silver
+    description: Roll a 2 and a 4
+  - name: Sea Fish 1
+    habitat: sea
+    money: 1
+    reputation: 1
+    rarity: common
+    size: 1
+    color: silver
+    description: Roll a 2 and a 4
+  - name: Sea Fish 2
+    habitat: sea
+    money: 2
+    reputation: 2
+    rarity: common
+    size: 2
+    color: silver
+    description: Roll a 2 and a 4
