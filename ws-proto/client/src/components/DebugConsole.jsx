@@ -1,19 +1,15 @@
-import { useEffect, useRef, useState, type ChangeEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 import { VscDebug } from "react-icons/vsc";
 
-interface DebugConsoleProps {
-  sendMessage: (message: string) => void;
-}
+const DebugConsole = ({ sendMessage }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [debugString, setDebugString] = useState("");
 
-const DebugConsole = ({ sendMessage }: DebugConsoleProps) => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [debugString, setDebugString] = useState<string>("");
-
-  const modalRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef(null);
 
   useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (!modalRef.current?.contains(e.target as Node)) {
+    const handleOutsideClick = (e) => {
+      if (!modalRef.current?.contains(e.target)) {
         closeModal();
       }
     };
@@ -35,7 +31,7 @@ const DebugConsole = ({ sendMessage }: DebugConsoleProps) => {
     setIsModalOpen(true);
   };
 
-  const debugStringHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  const debugStringHandler = (e) => {
     setDebugString(e.target.value);
   };
 
