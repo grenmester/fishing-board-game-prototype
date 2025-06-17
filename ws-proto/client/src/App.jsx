@@ -45,7 +45,8 @@ const App = () => {
   const wsRef = useRef();
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:3000");
+    const wsUrl = import.meta.env.VITE_SERVER_URL || "ws://localhost:3000";
+    const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
     ws.onmessage = (e) => {
@@ -118,8 +119,8 @@ const App = () => {
         <div className="flex flex-col gap-y-4">
           {Object.entries(gameState.board).map(([location, fishList]) => (
             <div className="p-4 bg-cyan-200 rounded-lg" key={location}>
-              <div className="flex flex-wrap gap-4 items-center">
-                <div className="flex flex-col items-center mx-2">
+              <div className="flex flex-wrap gap-4 justify-center items-center">
+                <div className="flex flex-col items-center w-36">
                   <h3 className="mb-2 text-2xl font-bold text-center">
                     {capitalize(location)}
                   </h3>

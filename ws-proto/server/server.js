@@ -6,11 +6,14 @@ const PORT = 3000;
 
 const fileContents = await fs.readFile("./data.yaml", "utf8");
 const gameData = YAML.parse(fileContents);
-const fishDeck = {
-  pier: gameData.fish.filter((fish) => fish.habitat === "pier"),
-  lake: gameData.fish.filter((fish) => fish.habitat === "lake"),
-  sea: gameData.fish.filter((fish) => fish.habitat === "sea"),
-};
+
+let fishDeck = {};
+gameData.fish.forEach((fish) => {
+  if (!(fish.habitat in fishDeck)) {
+    fishDeck[fish.habitat] = [];
+  }
+  fishDeck[fish.habitat].push(fish);
+});
 
 const getFish = (location) => {
   if (fishDeck[location].length === 0) {
@@ -83,17 +86,11 @@ wss.on("connection", (ws) => {
         }
 
         gameInProgress = true;
-        gameState.board = {
-          pier: Array(5)
+        Object.keys(fishDeck).forEach((location) => {
+          gameState.board[location] = Array(5)
             .fill()
-            .map(() => getFish("pier")),
-          lake: Array(5)
-            .fill()
-            .map(() => getFish("lake")),
-          sea: Array(5)
-            .fill()
-            .map(() => getFish("sea")),
-        };
+            .map(() => getFish(location));
+        });
         broadcast({ type: "gameInProgress", gameInProgress });
         break;
       case "addDie":

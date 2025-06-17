@@ -1,0 +1,8 @@
+version: 2
+tunnels:
+  server:
+    proto: http
+    addr: 3000
+  client:
+    proto: http
+    addr: 5173

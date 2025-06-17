@@ -9,25 +9,23 @@ const capitalize = (str) =>
 
 const FishCard = ({ clickHandler, fish }) => (
   <div
-    className="flex flex-col items-center p-4 w-40 h-56 bg-cyan-300 rounded-lg hover:bg-cyan-400"
+    className="flex flex-col items-center p-4 w-36 h-52 text-sm text-center bg-gray-300 rounded-lg hover:bg-gray-400"
     onClick={clickHandler}
   >
-    <div className="flex gap-x-4 items-center">
+    <div className="flex justify-between items-center w-28">
       <div className="flex gap-x-1 items-center">
         <FaStar />
         <span>{fish.reputation}</span>
       </div>
-      <p className="text-sm font-italic">{capitalize(fish.habitat)}</p>
+      <p className="text-xs font-bold">{capitalize(fish.habitat)}</p>
       <div className="flex gap-x-1 items-center">
         <FaMoneyBill />
         <span>{fish.money}</span>
       </div>
     </div>
-    <p className="text-xl font-bold">{fish.name}</p>
-    <p className="text-sm">
-      {fish.rarity}, {fish.size} cm
-    </p>
-    <FaFish className="my-4" size={40} />
+    <p className="mb-1 text-xs text-gray-500">{fish.category}</p>
+    <p className="h-10 font-bold text-lg/5">{fish.name}</p>
+    <FaFish className="my-2" size={40} />
     <p>{fish.description}</p>
   </div>
 );
