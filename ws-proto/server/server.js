@@ -130,6 +130,19 @@ wss.on("connection", (ws) => {
         const newFish = getFish(data.location);
         gameState.board[data.location].push(newFish);
         break;
+      case "removeCard":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't remove cards");
+          return;
+        }
+
+        gameState.board[data.location].splice(data.idx, 1);
+        break;
       case "drawCard":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
@@ -157,6 +170,23 @@ wss.on("connection", (ws) => {
         }
 
         gameState.players[ws.playerId].hand.splice(data.idx, 1);
+        break;
+      case "sellCard":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't sell cards");
+          return;
+        }
+
+        const [soldFish] = gameState.players[ws.playerId].hand.splice(
+          data.idx,
+          1,
+        );
+        gameState.players[ws.playerId].money += soldFish.money;
         break;
     }
     broadcast({ type: "gameState", gameState });

@@ -136,6 +136,7 @@ const App = () => {
                     clickHandler={() =>
                       sendMessage({ type: "drawCard", location, idx })
                     }
+                    discardHandler={() => sendMessage({ type: "removeCard", location, idx})}
                     fish={fish}
                     key={`${fish.name}${idx}`}
                   />
@@ -151,7 +152,8 @@ const App = () => {
           {gameState.players[playerId]?.hand.length > 0 &&
             gameState.players[playerId]?.hand.map((fish, idx) => (
               <FishCard
-                clickHandler={() => sendMessage({ type: "discardCard", idx })}
+                clickHandler={() => sendMessage({ type: "sellCard", idx })}
+                discardHandler={() => sendMessage({ type: "discardCard", idx})}
                 fish={fish}
                 key={`${fish.name}${idx}`}
               />

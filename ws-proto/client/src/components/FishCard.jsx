@@ -1,4 +1,4 @@
-import { FaFish, FaMoneyBill, FaStar } from "react-icons/fa6";
+import { FaFish, FaMoneyBill, FaStar, FaCircleXmark } from "react-icons/fa6";
 
 const capitalize = (str) =>
   str
@@ -7,11 +7,17 @@ const capitalize = (str) =>
     .map((word) => word.charAt(0).toUpperCase() + str.slice(1))
     .join(" ");
 
-const FishCard = ({ clickHandler, fish }) => (
+const FishCard = ({ clickHandler, discardHandler, fish }) => (
   <div
-    className="flex flex-col items-center p-4 w-36 h-52 text-sm text-center bg-gray-300 rounded-lg hover:bg-gray-400"
+    className="group relative flex flex-col items-center p-4 w-36 h-52 text-sm text-center bg-gray-300 rounded-lg hover:bg-gray-400"
     onClick={clickHandler}
   >
+    <button
+      className="invisible group-hover:visible absolute -top-3 -right-3 text-gray-300 bg-gray-900 rounded-full hover:text-gray-400"
+      onClick={e => { discardHandler(); e.stopPropagation() }}
+    >
+      <FaCircleXmark size={32} />
+    </button>
     <div className="flex justify-between items-center w-28">
       <div className="flex gap-x-1 items-center">
         <FaStar />
