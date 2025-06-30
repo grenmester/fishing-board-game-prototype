@@ -50,7 +50,29 @@ export NGROK_AUTHTOKEN="<your-token-here>"
 ngrok start --all --config ngrok.yaml
 
 # start client in another window
-export VITE_SERVER_URL=$(curl -s http://127.0.0.1:4040/api/tunnels | jq -r '.tunnels[] | select(.name == "server") | .public_url')
+export VITE_SERVER_URL=$(curl -s http://127.0.0.1:4040/api/tunnels | \
+  jq -r '.tunnels[] | select(.name == "server") | .public_url')
 cd ws-proto/client
 pnpm dev
+```
+
+## Card Data and Analytics
+
+Card data can be found in the `data` directory. If you want to generate sample
+data to use in the game, run the Jupyter Notebook to generate the card data.
+
+```sh
+cd data
+
+# create virtual environment and install jupyterlab
+python -m venv venv
+pip install jupyterlab
+./venv/bin/jupyter lab
+```
+
+After running the notebook, you can find the generated data in
+`merged_output.yaml`.
+
+```sh
+cp merged_output.yaml ../ws-proto/server/data.yaml
 ```

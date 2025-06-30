@@ -1,0 +1,1754 @@
+fishData:
+  - name: Pacific Barracuda
+    scientificName: Sphyraena argentea
+    habitat: coast
+    family: barracuda
+    rarity: common
+  - name: Pacific Tomcod
+    scientificName: Microgadus proximus
+    habitat: coast
+    family: cod
+    rarity: uncommon
+  - name: California Corbina
+    scientificName: Menticirrhus undulatus
+    habitat: coast
+    family: croaker
+    rarity: common
+  - name: Queenfish
+    scientificName: Seriphus politus
+    habitat: coast
+    family: croaker
+    rarity: common
+  - name: Shortfin Corvina
+    scientificName: Cynoscion parvipinnis
+    habitat: coast
+    family: croaker
+    rarity: common
+  - name: Spotfin Croaker
+    scientificName: Roncador stearnsii
+    habitat: coast
+    family: croaker
+    rarity: common
+  - name: White Croaker
+    scientificName: Genyonemus lineatus
+    habitat: coast
+    family: croaker
+    rarity: common
+  - name: Yellowfin Croaker
+    scientificName: Umbrina roncador
+    habitat: coast
+    family: croaker
+    rarity: common
+  - name: Black Croaker
+    scientificName: Cheilotrema saturnum
+    habitat: coast
+    family: croaker
+    rarity: uncommon
+  - name: Butter Sole
+    scientificName: Isopsetta isolepis
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: C-O Sole
+    scientificName: Pleuronichthys coenosus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: California Halibut
+    scientificName: Paralichthys californicus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Curlfin Sole
+    scientificName: Pleuronichthys decurrens
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Diamond Turbot
+    scientificName: Hypsopsetta guttulata
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Dover Sole
+    scientificName: Microstomus pacificus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: English Sole
+    scientificName: Parophrys vetulus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Flathead Sole
+    scientificName: Hippoglossoides elassodon
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Hornyhead Turbot
+    scientificName: Pleuronichthys verticalis
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Longfin Sanddab
+    scientificName: Citharichthys xanthostigma
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Pacific Sanddab
+    scientificName: Citharichthys sordidus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Rock Sole
+    scientificName: Lepidopsetta bilineata
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Sand Sole
+    scientificName: Psettichthys melanostictus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Speckled Sanddab
+    scientificName: Citharichthys stigmaeus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Spotted Turbot
+    scientificName: Pleuronichthys ritteri
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Starry Flounder
+    scientificName: Platichthys stellatus
+    habitat: coast
+    family: flatfish
+    rarity: common
+  - name: Fantail Sole
+    scientificName: Xystreurys liolepis
+    habitat: coast
+    family: flatfish
+    rarity: uncommon
+  - name: Kelp Greenling
+    scientificName: Hexagrammos decagrammus
+    habitat: coast
+    family: greenling
+    rarity: common/uncommon
+  - name: Lingcod
+    scientificName: Ophiodon elongatus
+    habitat: coast
+    family: greenling
+    rarity: uncommon
+  - name: Longspine Combfish
+    scientificName: Zaniolepis latipinnis
+    habitat: coast
+    family: greenling
+    rarity: uncommon
+  - name: Painted Greenling
+    scientificName: Oxylebius pictus
+    habitat: coast
+    family: greenling
+    rarity: uncommon
+  - name: Rock Greenling
+    scientificName: Hexagrammos lagocephalus
+    habitat: coast
+    family: greenling
+    rarity: uncommon
+  - name: Whitespotted Greenling
+    scientificName: Hexagrammos stelleri
+    habitat: coast
+    family: greenling
+    rarity: uncommon
+  - name: Barred Sand Bass
+    scientificName: Paralabrax nebulifer
+    habitat: coast
+    family: grouper
+    rarity: common
+  - name: Kelp Bass
+    scientificName: Paralabrax clathratus
+    habitat: coast
+    family: grouper
+    rarity: common
+  - name: Spotted Sand Bass
+    scientificName: Paralabrax maculatofasciatus
+    habitat: coast
+    family: grouper
+    rarity: common
+  - name: Northern Anchovy
+    scientificName: Engraulis mordax
+    habitat: coast
+    family: herring
+    rarity: common
+  - name: Pacific Herring
+    scientificName: Clupea pallasii
+    habitat: coast
+    family: herring
+    rarity: common
+  - name: Pacific Sardine
+    scientificName: Sardinops sagax
+    habitat: coast
+    family: herring
+    rarity: common
+  - name: California Yellowtail
+    scientificName: Seriola dorsalis
+    habitat: coast
+    family: jack
+    rarity: common
+  - name: Pacific Pompano
+    scientificName: Peprilus simillimus
+    habitat: coast
+    family: jack
+    rarity: common
+  - name: Jack Mackerel
+    scientificName: Trachurus symmetricus
+    habitat: coast
+    family: mackerel
+    rarity: common
+  - name: Pacific Mackerel
+    scientificName: Scomber japonicus
+    habitat: coast
+    family: mackerel
+    rarity: common
+  - name: Barred Surfperch
+    scientificName: Amphistichus argenteus
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Bigscale Logperch
+    scientificName: Percina macrolepida
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Black Surfperch
+    scientificName: Embiotoca jacksoni
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Blacksmith
+    scientificName: Chromis punctipinnis
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Calico Surfperch
+    scientificName: Amphistichus koelzi
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Dwarf Perch
+    scientificName: Micrometrus minimus
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Halfmoon
+    scientificName: Medialuna californiensis
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Kelp Perch
+    scientificName: Brachyistius frenatus
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Opaleye
+    scientificName: Girella nigricans
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Pile Perch
+    scientificName: Phanerodon vacca
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Rainbow Surfperch
+    scientificName: Hypsurus caryi
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Redtail Surfperch
+    scientificName: Amphistichus rhodoterus
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Rubberlip Seaperch
+    scientificName: Rhacochilus toxotes
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Sargo
+    scientificName: Anisotremus davidsonii
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Shiner Perch
+    scientificName: Cymatogaster aggregata
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Silver Surfperch
+    scientificName: Hyperprosopon ellipticum
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Spotfin Surfperch
+    scientificName: Hyperprosopon anale
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Striped Seaperch
+    scientificName: Embiotoca lateralis
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Walleye Surfperch
+    scientificName: Hyperprosopon argenteum
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: White Seaperch
+    scientificName: Phanerodon furcatus
+    habitat: coast
+    family: perch
+    rarity: common
+  - name: Reef Perch
+    scientificName: Micrometrus aurora
+    habitat: coast
+    family: perch
+    rarity: common/uncommon
+  - name: Sharpnose Seaperch
+    scientificName: Phanerodon atripes
+    habitat: coast
+    family: perch
+    rarity: uncommon
+  - name: Tule Perch
+    scientificName: Hysterocarpus traskii
+    habitat: coast
+    family: perch
+    rarity: uncommon/rare
+  - name: Bullseye Puffer
+    scientificName: Sphoeroides annulatus
+    habitat: coast
+    family: pufferfish
+    rarity: uncommon
+  - name: Balloonfish
+    scientificName: Diodon holocanthus
+    habitat: coast
+    family: pufferfish
+    rarity: uncommon/rare
+  - name: Black Rockfish
+    scientificName: Sebastes melanops
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Black-and-Yellow Rockfish
+    scientificName: Sebastes chrysomelas
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Blue Rockfish
+    scientificName: Sebastes mystinus
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Brown Rockfish
+    scientificName: Sebastes auriculatus
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Calico Rockfish
+    scientificName: Sebastes dallii
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: California Scorpionfish
+    scientificName: Scorpaena guttata
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: China Rockfish
+    scientificName: Sebastes nebulosus
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Copper Rockfish
+    scientificName: Sebastes caurinus
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Gopher Rockfish
+    scientificName: Sebastes carnatus
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Grass Rockfish
+    scientificName: Sebastes rastrelliger
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Kelp Rockfish
+    scientificName: Sebastes atrovirens
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Olive Rockfish
+    scientificName: Sebastes serranoides
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Treefish
+    scientificName: Sebastes serriceps
+    habitat: coast
+    family: rockfish
+    rarity: common
+  - name: Bocaccio Rockfish
+    scientificName: Sebastes paucispinis
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Canary Rockfish
+    scientificName: Sebastes pinniger
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Chameleon Rockfish
+    scientificName: Sebastes phillipsi
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Chilipepper Rockfish
+    scientificName: Sebastes goodei
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Dusky Rockfish
+    scientificName: Sebastes ciliatus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Dwarf-Red Rockfish
+    scientificName: Sebastes rufinanus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Flag Rockfish
+    scientificName: Sebastes rubrivinctus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Freckled Rockfish
+    scientificName: Sebastes lentiginosus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Greenblotched Rockfish
+    scientificName: Sebastes rosenblatti
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Greenspotted Rockfish
+    scientificName: Sebastes chlorostictus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Greenstriped Rockfish
+    scientificName: Sebastes elongatus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Halfbanded Rockfish
+    scientificName: Sebastes semicinctus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Harlequin Rockfish
+    scientificName: Sebastes variegatus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Honeycomb Rockfish
+    scientificName: Sebastes umbrosus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Mexican Rockfish
+    scientificName: Sebastes macdonaldi
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Pink Rockfish
+    scientificName: Sebastes eos
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Pinkrose Rockfish
+    scientificName: Sebastes simulator
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Pygmy Rockfish
+    scientificName: Sebastes wilsoni
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Rainbow Scorpionfish
+    scientificName: Scorpaenodes xyris
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Redstripe Rockfish
+    scientificName: Sebastes proriger
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Rosethorn Rockfish
+    scientificName: Sebastes helvomaculatus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Rosy Rockfish
+    scientificName: Sebastes rosaceus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Shortbelly Rockfish
+    scientificName: Sebastes jordani
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Silvergrey Rockfish
+    scientificName: Sebastes brevispinis
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Speckled Rockfish
+    scientificName: Sebastes ovalis
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Squarespot Rockfish
+    scientificName: Sebastes hopkinsi
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Starry Rockfish
+    scientificName: Sebastes constellatus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Stripetail Rockfish
+    scientificName: Sebastes saxicola
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Swordspine Rockfish
+    scientificName: Sebastes ensifer
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Tiger Rockfish
+    scientificName: Sebastes nigrocinctus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Vermilion Rockfish
+    scientificName: Sebastes miniatus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Widow Rockfish
+    scientificName: Sebastes entomelas
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Yellowtail Rockfish
+    scientificName: Sebastes flavidus
+    habitat: coast
+    family: rockfish
+    rarity: common/uncommon
+  - name: Stripefin Ronquil
+    scientificName: Rathbunella alleni
+    habitat: coast
+    family: ronquil
+    rarity: uncommon
+  - name: Northern Ronquil
+    scientificName: Ronquilus jordani
+    habitat: coast
+    family: ronquil
+    rarity: uncommon/rare
+  - name: Cabezon
+    scientificName: Scorpaenichthys marmoratus
+    habitat: coast
+    family: sculpin
+    rarity: common
+  - name: Brown Smoothhound Shark
+    scientificName: Mustelus henlei
+    habitat: coast
+    family: shark
+    rarity: common
+  - name: Gray Smoothhound Shark
+    scientificName: Mustelus californicus
+    habitat: coast
+    family: shark
+    rarity: common
+  - name: Leopard Shark
+    scientificName: Triakis semifasciata
+    habitat: coast
+    family: shark
+    rarity: common
+  - name: Pacific Angelshark
+    scientificName: Squatina californica
+    habitat: coast
+    family: shark
+    rarity: common
+  - name: Spiny Dogfish
+    scientificName: Squalus acanthias
+    habitat: coast
+    family: shark
+    rarity: common
+  - name: Swell Shark
+    scientificName: Cephaloscyllium ventriosum
+    habitat: coast
+    family: shark
+    rarity: common
+  - name: Jacksmelt
+    scientificName: Atherinopsis californiensis
+    habitat: coast
+    family: silverside
+    rarity: common
+  - name: Topsmelt
+    scientificName: Atherinops affinis
+    habitat: coast
+    family: silverside
+    rarity: common
+  - name: California Grunion
+    scientificName: Leuresthes tenuis
+    habitat: coast
+    family: silverside
+    rarity: uncommon
+  - name: Night Smelt
+    scientificName: Spirinchus starksi
+    habitat: coast
+    family: smelt
+    rarity: common
+  - name: Surf Smelt
+    scientificName: Hypomesus pretiosus
+    habitat: coast
+    family: smelt
+    rarity: common
+  - name: Delta Smelt
+    scientificName: Hypomesus transpacificus
+    habitat: coast
+    family: smelt
+    rarity: rare
+  - name: Japanese Smelt
+    scientificName: Hypomesus nipponensis
+    habitat: coast
+    family: smelt
+    rarity: uncommon
+  - name: Whitebait Smelt
+    scientificName: Allosmerus elongatus
+    habitat: coast
+    family: smelt
+    rarity: uncommon
+  - name: Eulachon
+    scientificName: Thaleichthys pacificus
+    habitat: coast
+    family: smelt
+    rarity: uncommon/rare
+  - name: Longfin Smelt
+    scientificName: Spirinchus thaleichthys
+    habitat: coast
+    family: smelt
+    rarity: uncommon/rare
+  - name: Plainfin Midshipman
+    scientificName: Porichthys notatus
+    habitat: coast
+    family: toadfish
+    rarity: common
+  - name: "Senorita"
+    scientificName: Oxyjulis californica
+    habitat: coast
+    family: wrasse
+    rarity: common
+  - name: California Sheephead
+    scientificName: Bodianus pulcher
+    habitat: coast
+    family: wrasse
+    rarity: common/uncommon
+  - name: Rock Wrasse
+    scientificName: Halichoeres semicinctus
+    habitat: coast
+    family: wrasse
+    rarity: common/uncommon
+
+  - name: Striped Marlin
+    scientificName: Kajikia audax
+    habitat: ocean
+    family: billfish
+    rarity: common
+  - name: Blue Marlin
+    scientificName: Makaira nigricans
+    habitat: ocean
+    family: billfish
+    rarity: uncommon
+  - name: Broadbill Swordfish
+    scientificName: Xiphias gladius
+    habitat: ocean
+    family: billfish
+    rarity: uncommon
+  - name: Sailfish
+    scientificName: Istiophorus platypterus
+    habitat: ocean
+    family: billfish
+    rarity: uncommon
+  - name: Shortbill Spearfish
+    scientificName: Tetrapturus angustirostris
+    habitat: ocean
+    family: billfish
+    rarity: uncommon
+  - name: Pacific Grenadier
+    scientificName: Coryphaenoides acrolepis
+    habitat: ocean
+    family: cod
+    rarity: common
+  - name: Pacific Whiting
+    scientificName: Mercluccius productus
+    habitat: ocean
+    family: cod
+    rarity: common
+  - name: Finescale Codling
+    scientificName: Antimora microlepis
+    habitat: ocean
+    family: cod
+    rarity: common/uncommon
+  - name: Sablefish
+    scientificName: Anoplopoma fimbria
+    habitat: ocean
+    family: cod
+    rarity: common/uncommon
+  - name: Pacific Cod
+    scientificName: Gadus macrocephalus
+    habitat: ocean
+    family: cod
+    rarity: uncommon/rare
+  - name: White Seabass
+    scientificName: Atractoscion nobilis,
+    habitat: ocean
+    family: croaker
+    rarity: uncommon
+  - name: Dorado
+    scientificName: Coryphaena hippurus
+    habitat: ocean
+    family: dolphinfish
+    rarity: common
+  - name: Arrowtooth Flounder
+    scientificName: Atheresthes stomias
+    habitat: ocean
+    family: flatfish
+    rarity: common
+  - name: Petrale Sole
+    scientificName: Eopsetta jordani
+    habitat: ocean
+    family: flatfish
+    rarity: common
+  - name: Rex Sole
+    scientificName: Glyptocephalus zachirus
+    habitat: ocean
+    family: flatfish
+    rarity: common
+  - name: Pacific Halibut
+    scientificName: Hippoglossus stenolepis
+    habitat: ocean
+    family: flatfish
+    rarity: uncommon
+  - name: Smallhead Flyingfish
+    scientificName: Cheilopogon pinnatibarbatus
+    habitat: ocean
+    family: flyingfish
+    rarity: common
+  - name: Gulf Coney
+    scientificName: Hyporthodus acanthistius
+    habitat: ocean
+    family: grouper
+    rarity: rare
+  - name: Spotted Cabrilla
+    scientificName: Epinephelus analogus
+    habitat: ocean
+    family: grouper
+    rarity: rare
+  - name: Star-Studded Grouper
+    scientificName: Hyporthodus niphobles
+    habitat: ocean
+    family: grouper
+    rarity: uncommon/rare
+  - name: Round Herring
+    scientificName: Etrumeus sadina
+    habitat: ocean
+    family: herring
+    rarity: uncommon
+  - name: Almaco Jack
+    scientificName: Seriola rivoliana
+    habitat: ocean
+    family: jack
+    rarity: rare
+  - name: Pacific Crevalle Jack
+    scientificName: Caranx caninus
+    habitat: ocean
+    family: jack
+    rarity: rare
+  - name: Rainbow Runner
+    scientificName: Elagatis bipinnulata
+    habitat: ocean
+    family: jack
+    rarity: rare
+  - name: Bigeye Trevally
+    scientificName: Caranx sexfasciatus
+    habitat: ocean
+    family: jack
+    rarity: uncommon
+  - name: Yellowtail Amberjack
+    scientificName: Seriola lalandi
+    habitat: ocean
+    family: jack
+    rarity: uncommon
+  - name: Longnose Lancetfish
+    scientificName: Alepisaurus ferox
+    habitat: ocean
+    family: lancetfish
+    rarity: uncommon
+  - name: Louvar
+    scientificName: Luvarus imperialis
+    habitat: ocean
+    family: louvar
+    rarity: uncommon
+  - name: Pacific Wahoo
+    scientificName: Acanthocybium solandri
+    habitat: ocean
+    family: mackerel
+    rarity: uncommon
+  - name: Ocean Sunfish
+    scientificName: Mola mola
+    habitat: ocean
+    family: mola
+    rarity: uncommon
+  - name: Bigeye Pacific Opah
+    scientificName: Lampris megalopsis
+    habitat: ocean
+    family: opah
+    rarity: rare
+  - name: Smalleye Pacific Opah
+    scientificName: Lampris incognitus
+    habitat: ocean
+    family: opah
+    rarity: rare
+  - name: Pink Surfperch
+    scientificName: Zalembius rosaceus
+    habitat: ocean
+    family: perch
+    rarity: uncommon
+  - name: Aurora Rockfish
+    scientificName: Sebastes aurora
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Bank Rockfish
+    scientificName: Sebastes rufus
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Blackgill Rockfish
+    scientificName: Sebastes melanostomus
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Darkblotched Rockfish
+    scientificName: Sebastes crameri
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Longspine Thornyhead
+    scientificName: Sebastolobus altivelis
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Pacific Ocean Perch
+    scientificName: Sebastes alutus
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Redbanded Rockfish
+    scientificName: Sebastes babcocki
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Rougheye Rockfish
+    scientificName: Sebastes aleutianus
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Sharpchin Rockfish
+    scientificName: Sebastes zacentrus
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Shortraker Rockfish
+    scientificName: Sebastes borealis
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Shortspine Thornyhead
+    scientificName: Sebastolobus alascanus
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Splitnose Rockfish
+    scientificName: Sebastes diploproa
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Yellowmouth Rockfish
+    scientificName: Sebastes reedi
+    habitat: ocean
+    family: rockfish
+    rarity: common
+  - name: Shortfin Mako Shark
+    scientificName: Isurus oxyrinchus
+    habitat: ocean
+    family: shark
+    rarity: common
+  - name: Spotted Ratfish
+    scientificName: Hydrolagus colliei
+    habitat: ocean
+    family: shark
+    rarity: common
+  - name: Thresher Shark
+    scientificName: Alopias vulpinus
+    habitat: ocean
+    family: shark
+    rarity: common
+  - name: Horn Shark
+    scientificName: Heterodontus francisci
+    habitat: ocean
+    family: shark
+    rarity: common/uncommon
+  - name: Soupfin Shark
+    scientificName: Galeorhinus galeus
+    habitat: ocean
+    family: shark
+    rarity: rare
+  - name: Salmon Shark
+    scientificName: Lamna ditropis
+    habitat: ocean
+    family: shark
+    rarity: uncommon
+  - name: Sevengill Shark
+    scientificName: Notorynchus cepedianus
+    habitat: ocean
+    family: shark
+    rarity: uncommon
+  - name: Sixgill Shark
+    scientificName: Hexanchus griseus
+    habitat: ocean
+    family: shark
+    rarity: uncommon
+  - name: Blue Shark
+    scientificName: Prionace glauca
+    habitat: ocean
+    family: shark
+    rarity: uncommon/rare
+  - name: Ocean Whitefish
+    scientificName: Caulolatilus princeps
+    habitat: ocean
+    family: tilefish
+    rarity: common
+  - name: Bighead Tilefish
+    scientificName: Caulolatilus affinis
+    habitat: ocean
+    family: tilefish
+    rarity: rare
+  - name: Pacific Bonito
+    scientificName: Sarda chiliensis
+    habitat: ocean
+    family: tuna
+    rarity: common
+  - name: Skipjack Tuna
+    scientificName: Katsuwonus pelamis
+    habitat: ocean
+    family: tuna
+    rarity: common
+  - name: Yellowfin Tuna
+    scientificName: Thunnus albacares
+    habitat: ocean
+    family: tuna
+    rarity: common
+  - name: Albacore Tuna
+    scientificName: Thunnus alalunga
+    habitat: ocean
+    family: tuna
+    rarity: uncommon
+  - name: Bullet Tuna
+    scientificName: Auxis rochei
+    habitat: ocean
+    family: tuna
+    rarity: uncommon
+  - name: Frigate Tuna
+    scientificName: Auxis thazard
+    habitat: ocean
+    family: tuna
+    rarity: uncommon
+  - name: Pacific Bluefin Tuna
+    scientificName: Thunnus orientalis
+    habitat: ocean
+    family: tuna
+    rarity: uncommon
+  - name: Bigeye Tuna
+    scientificName: Thunnus obesus
+    habitat: ocean
+    family: tuna
+    rarity: uncommon/rare
+  - name: Black Skipjack Tuna
+    scientificName: Euthynnus lineatus
+    habitat: ocean
+    family: tuna
+    rarity: uncommon/rare
+  - name: Escolar
+    scientificName: Lepidocybium flavobrunneum
+    habitat: ocean
+    family: tuna
+    rarity: uncommon/rare
+
+  - name: Common Carp
+    scientificName: Cyprinus carpio
+    habitat: river
+    family: carp
+    rarity: common
+  - name: Goldfish
+    scientificName: Carassius auratus
+    habitat: river
+    family: carp
+    rarity: common
+  - name: Grass Carp
+    scientificName: Ctenopharyngodon idella
+    habitat: river
+    family: carp
+    rarity: uncommon
+  - name: Tench
+    scientificName: Tinca tinca
+    habitat: river
+    family: carp
+    rarity: uncommon
+  - name: Blue Catfish
+    scientificName: Ictalurus furcatus
+    habitat: river
+    family: catfish
+    rarity: common
+  - name: Brown Bullhead
+    scientificName: Ameiurus nebulosus
+    habitat: river
+    family: catfish
+    rarity: common
+  - name: Channel Catfish
+    scientificName: Ictalurus punctatus
+    habitat: river
+    family: catfish
+    rarity: common
+  - name: Flathead Catfish
+    scientificName: Pylodictis olivaris
+    habitat: river
+    family: catfish
+    rarity: common
+  - name: White Catfish
+    scientificName: Ameiuris catus
+    habitat: river
+    family: catfish
+    rarity: common
+  - name: Black Bullhead
+    scientificName: Ameiurus melas
+    habitat: river
+    family: catfish
+    rarity: uncommon
+  - name: Yellow Bullhead
+    scientificName: Ameiurus natalis
+    habitat: river
+    family: catfish
+    rarity: uncommon
+  - name: Longjaw Mudsucker
+    scientificName: Gillichthys mirabilis
+    habitat: river
+    family: goby
+    rarity: common
+  - name: Yellowfin Goby
+    scientificName: Acanthogobius flavimanus
+    habitat: river
+    family: goby
+    rarity: common
+  - name: American Shad
+    scientificName: Alosa sapidissima
+    habitat: river
+    family: herring
+    rarity: common
+  - name: Threadfin Shad
+    scientificName: Dorosoma petenense
+    habitat: river
+    family: herring
+    rarity: common
+  - name: Fathead Minnow
+    scientificName: Pimephales promelas
+    habitat: river
+    family: minnow
+    rarity: common
+  - name: Golden Shiner
+    scientificName: Notemigonus crysoleucas
+    habitat: river
+    family: minnow
+    rarity: common
+  - name: Red Shiner
+    scientificName: Cyprinella lutrensis
+    habitat: river
+    family: minnow
+    rarity: common
+  - name: Sacramento Blackfish
+    scientificName: Orthodon microlepidotus
+    habitat: river
+    family: minnow
+    rarity: common
+  - name: Sacramento Pikeminnow
+    scientificName: Ptychocheilus grandis
+    habitat: river
+    family: minnow
+    rarity: common
+  - name: Lahontan Redside
+    scientificName: Richardsonius egregius
+    habitat: river
+    family: minnow
+    rarity: common/uncommon
+  - name: California Roach
+    scientificName: Hesperoleucus symmetricus
+    habitat: river
+    family: minnow
+    rarity: uncommon/rare
+  - name: Hardhead
+    scientificName: Mylopharodon conocephalus
+    habitat: river
+    family: minnow
+    rarity: uncommon/rare
+  - name: Hitch
+    scientificName: Lavinia exilicauda
+    habitat: river
+    family: minnow
+    rarity: uncommon/rare
+  - name: Sacramento Splittail
+    scientificName: Pogonichthys macrolepidotus
+    habitat: river
+    family: minnow
+    rarity: uncommon/rare
+  - name: Speckled Dace
+    scientificName: Rhinichthys osculus
+    habitat: river
+    family: minnow
+    rarity: uncommon/rare
+  - name: Striped Mullet
+    scientificName: Mugil cephalus
+    habitat: river
+    family: mullet
+    rarity: common/uncommon
+  - name: Yellow Perch
+    scientificName: Perca flavescens
+    habitat: river
+    family: perch
+    rarity: uncommon
+  - name: Coho Salmon
+    scientificName: Oncorhynchus kisutch
+    habitat: river
+    family: salmon
+    rarity: rare
+  - name: Chum Salmon
+    scientificName: Oncorhynchus keta
+    habitat: river
+    family: salmon
+    rarity: uncommon
+  - name: Pink Salmon
+    scientificName: Oncorhynchus gorbuscha
+    habitat: river
+    family: salmon
+    rarity: uncommon
+  - name: Sockeye Salmon
+    scientificName: Oncorhynchus nerka
+    habitat: river
+    family: salmon
+    rarity: uncommon
+  - name: Chinook Salmon
+    scientificName: Oncorhynchus tshawytscha
+    habitat: river
+    family: salmon
+    rarity: uncommon/rare
+  - name: Staghorn Sculpin
+    scientificName: Leptocottus armatus
+    habitat: river
+    family: sculpin
+    rarity: common
+  - name: Inland Silverside
+    scientificName: Menidia beryllina
+    habitat: river
+    family: silverside
+    rarity: common
+  - name: Mississippi Silverside
+    scientificName: Menidia audens
+    habitat: river
+    family: silverside
+    rarity: common
+  - name: White Sturgeon
+    scientificName: Sinosturio transmontanus
+    habitat: river
+    family: sturgeon
+    rarity: rare
+  - name: Owens Sucker
+    scientificName: Catostomus fumelventris
+    habitat: river
+    family: sucker
+    rarity: common
+  - name: Sacramento Sucker
+    scientificName: Catostomus occidentalis
+    habitat: river
+    family: sucker
+    rarity: common
+  - name: Tahoe Sucker
+    scientificName: Catostomus tahoensis
+    habitat: river
+    family: sucker
+    rarity: common
+  - name: Mountain Sucker
+    scientificName: Catostomus platyrhynchus
+    habitat: river
+    family: sucker
+    rarity: uncommon
+  - name: Black Crappie
+    scientificName: Pomoxis nigromaculatus
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Bluegill
+    scientificName: Lepomis macrochirus
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Green Sunfish
+    scientificName: Lepomis cyanellus
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Largemouth Bass
+    scientificName: Micropterus salmoides
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Pumpkinseed
+    scientificName: Lepomis gibbosus
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Redear Sunfish
+    scientificName: Lepomis microlophus
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Smallmouth Bass
+    scientificName: Micropterus dolomieu
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Spotted Bass
+    scientificName: Micropterus punctulatus
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Striped Bass
+    scientificName: Morone saxatilis
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: White Crappie
+    scientificName: Pomoxis annularis
+    habitat: river
+    family: sunfish
+    rarity: common
+  - name: Redeye Bass
+    scientificName: Micropterus coosae
+    habitat: river
+    family: sunfish
+    rarity: uncommon
+  - name: Warmouth
+    scientificName: Lepomis gulosus
+    habitat: river
+    family: sunfish
+    rarity: uncommon
+  - name: White Bass
+    scientificName: Morone chrysops
+    habitat: river
+    family: sunfish
+    rarity: uncommon
+  - name: Sacramento Perch
+    scientificName: Archoplites interruptus
+    habitat: river
+    family: sunfish
+    rarity: uncommon/rare
+  - name: Blue Tilapia
+    scientificName: Oreochromis aureus
+    habitat: river
+    family: tilapia
+    rarity: common
+  - name: Mozambique Tilapia
+    scientificName: Oreochromis mossambicus
+    habitat: river
+    family: tilapia
+    rarity: common
+  - name: Nile Tilapia
+    scientificName: Oreochromis niloticus
+    habitat: river
+    family: tilapia
+    rarity: common
+  - name: Redbelly Tilapia
+    scientificName: Coptodon zillii
+    habitat: river
+    family: tilapia
+    rarity: common
+  - name: Brook Trout
+    scientificName: Salvelinus fontinalis
+    habitat: river
+    family: trout
+    rarity: common
+  - name: Brown Trout
+    scientificName: Salmo trutta
+    habitat: river
+    family: trout
+    rarity: common
+  - name: Mountain Whitefish
+    scientificName: Prosopium williamsoni
+    habitat: river
+    family: trout
+    rarity: common
+  - name: Rainbow Trout
+    scientificName: Oncorhynchus mykiss
+    habitat: river
+    family: trout
+    rarity: common
+  - name: Arctic Grayling
+    scientificName: Thymallus arcticus
+    habitat: river
+    family: trout
+    rarity: uncommon
+  - name: Lake Trout
+    scientificName: Salvelinus namaycush
+    habitat: river
+    family: trout
+    rarity: uncommon
+  - name: Cutthroat Trout
+    scientificName: Oncorhynchus clarkii
+    habitat: river
+    family: trout
+    rarity: uncommon/rare
+  - name: Golden Trout
+    scientificName: Oncorhynchus aguabonita
+    habitat: river
+    family: trout
+    rarity: uncommon/rare
+
+cardData:
+  - reputation: 1
+    description: "Roll any #"
+    numDice: 1
+    odds: 6
+  - reputation: 1
+    description: "Roll a # >=3"
+    numDice: 1
+    odds: 4
+  - reputation: 1
+    description: "Roll a # <=4"
+    numDice: 1
+    odds: 4
+  - reputation: 1
+    description: "Roll a # <=3"
+    numDice: 1
+    odds: 3
+  - reputation: 1
+    description: "Roll a # >=4"
+    numDice: 1
+    odds: 3
+  - reputation: 1
+    description: "Roll an odd #"
+    numDice: 1
+    odds: 3
+  - reputation: 1
+    description: "Roll an even #"
+    numDice: 1
+    odds: 3
+  - reputation: 2
+    description: "Roll a 1 or 2"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 1 or 3"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 1 or 4"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 1 or 5"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 1 or 6"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 2 or 3"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 2 or 4"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 2 or 5"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 2 or 6"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 3 or 4"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 3 or 5"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 3 or 6"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 4 or 5"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 4 or 6"
+    numDice: 1
+    odds: 2
+  - reputation: 2
+    description: "Roll a 5 or 6"
+    numDice: 1
+    odds: 2
+  - reputation: 3
+    description: "Roll a 1"
+    numDice: 1
+    odds: 1
+  - reputation: 3
+    description: "Roll a 2"
+    numDice: 1
+    odds: 1
+  - reputation: 3
+    description: "Roll a 3"
+    numDice: 1
+    odds: 1
+  - reputation: 3
+    description: "Roll a 4"
+    numDice: 1
+    odds: 1
+  - reputation: 3
+    description: "Roll a 5"
+    numDice: 1
+    odds: 1
+  - reputation: 3
+    description: "Roll a 6"
+    numDice: 1
+    odds: 1
+
+  - reputation: 4
+    description: "Roll any two #s"
+    numDice: 2
+    odds: 36
+  - reputation: 4
+    description: "Roll two #s >= 3"
+    numDice: 2
+    odds: 16
+  - reputation: 4
+    description: "Roll two #s <= 4"
+    numDice: 2
+    odds: 16
+  - reputation: 4
+    description: "Roll a 1 and any #"
+    numDice: 2
+    odds: 11
+  - reputation: 4
+    description: "Roll a 2 and any #"
+    numDice: 2
+    odds: 11
+  - reputation: 4
+    description: "Roll a 3 and any #"
+    numDice: 2
+    odds: 11
+  - reputation: 4
+    description: "Roll a 4 and any #"
+    numDice: 2
+    odds: 11
+  - reputation: 4
+    description: "Roll a 5 and any #"
+    numDice: 2
+    odds: 11
+  - reputation: 4
+    description: "Roll a 6 and any #"
+    numDice: 2
+    odds: 11
+  - reputation: 4
+    description: "Roll two consecutive #s"
+    numDice: 2
+    odds: 10
+  - reputation: 4
+    description: "Roll two #s <= 3"
+    numDice: 2
+    odds: 9
+  - reputation: 4
+    description: "Roll two #s >= 4"
+    numDice: 2
+    odds: 9
+  - reputation: 4
+    description: "Roll two odd #s"
+    numDice: 2
+    odds: 9
+  - reputation: 4
+    description: "Roll two even #s"
+    numDice: 2
+    odds: 9
+  - reputation: 5
+    description: "Roll two matching #s"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll a 1 and an even #"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll a 2 and an odd #"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll a 3 and an even #"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll a 4 and an odd #"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll a 5 and an even #"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll a 6 and an odd #"
+    numDice: 2
+    odds: 6
+  - reputation: 4
+    description: "Roll a 1 and a # >=4"
+    numDice: 2
+    odds: 6
+  - reputation: 4
+    description: "Roll a 2 and a # >=4"
+    numDice: 2
+    odds: 6
+  - reputation: 4
+    description: "Roll a 3 and a # >=4"
+    numDice: 2
+    odds: 6
+  - reputation: 4
+    description: "Roll a 4 and a # <=3"
+    numDice: 2
+    odds: 6
+  - reputation: 4
+    description: "Roll a 5 and a # <=3"
+    numDice: 2
+    odds: 6
+  - reputation: 4
+    description: "Roll a 6 and a # <=3"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll two #s that sum to 4"
+    numDice: 2
+    odds: 3
+  - reputation: 5
+    description: "Roll two #s that sum to 5"
+    numDice: 2
+    odds: 4
+  - reputation: 5
+    description: "Roll two #s that sum to 6"
+    numDice: 2
+    odds: 5
+  - reputation: 5
+    description: "Roll two #s that sum to 7"
+    numDice: 2
+    odds: 6
+  - reputation: 5
+    description: "Roll two #s that sum to 8"
+    numDice: 2
+    odds: 5
+  - reputation: 5
+    description: "Roll two #s that sum to 9"
+    numDice: 2
+    odds: 4
+  - reputation: 5
+    description: "Roll two #s that sum to 10"
+    numDice: 2
+    odds: 3
+  - reputation: 5
+    description: "Roll a 1 and 2"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 1 and 3"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 1 and 4"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 1 and 5"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 1 and 6"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 2 and 3"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 2 and 4"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 2 and 5"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 2 and 6"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 3 and 4"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 3 and 5"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 3 and 6"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 4 and 5"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 4 and 6"
+    numDice: 2
+    odds: 2
+  - reputation: 5
+    description: "Roll a 5 and 6"
+    numDice: 2
+    odds: 2
+
+  - reputation: 6
+    description: "Roll any three #s"
+    numDice: 3
+    odds: 216
+  - reputation: 6
+    description: "Roll three different #s"
+    numDice: 3
+    odds: 120
+  - reputation: 6
+    description: "Roll three #s >= 3"
+    numDice: 3
+    odds: 64
+  - reputation: 6
+    description: "Roll three #s <= 4"
+    numDice: 3
+    odds: 64
+  - reputation: 6
+    description: "Roll three #s <= 3"
+    numDice: 3
+    odds: 27
+  - reputation: 6
+    description: "Roll three #s >= 4"
+    numDice: 3
+    odds: 27
+  - reputation: 6
+    description: "Roll three odd #s"
+    numDice: 3
+    odds: 27
+  - reputation: 6
+    description: "Roll three even #s"
+    numDice: 3
+    odds: 27
+  - reputation: 6
+    description: "Roll three consecutive #s"
+    numDice: 3
+    odds: 24
+  - reputation: 6
+    description: "Roll three #s that sum to 6"
+    numDice: 3
+    odds: 10
+  - reputation: 6
+    description: "Roll three #s that sum to 7"
+    numDice: 3
+    odds: 15
+  - reputation: 6
+    description: "Roll three #s that sum to 8"
+    numDice: 3
+    odds: 21
+  - reputation: 6
+    description: "Roll three #s that sum to 9"
+    numDice: 3
+    odds: 25
+  - reputation: 6
+    description: "Roll three #s that sum to 10"
+    numDice: 3
+    odds: 27
+  - reputation: 6
+    description: "Roll three #s that sum to 11"
+    numDice: 3
+    odds: 27
+  - reputation: 6
+    description: "Roll three #s that sum to 12"
+    numDice: 3
+    odds: 25
+  - reputation: 6
+    description: "Roll three #s that sum to 13"
+    numDice: 3
+    odds: 21
+  - reputation: 6
+    description: "Roll three #s that sum to 14"
+    numDice: 3
+    odds: 15
+  - reputation: 6
+    description: "Roll three #s that sum to 15"
+    numDice: 3
+    odds: 10
+  - reputation: 7
+    description: "Roll three matching #s"
+    numDice: 3
+    odds: 6
+
+  - reputation: 8
+    description: "Roll four different #s"
+    numDice: 4
+    odds: 360
+  - reputation: 9
+    description: "Roll four matching #s"
+    numDice: 4
+    odds: 6
