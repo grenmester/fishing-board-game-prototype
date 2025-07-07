@@ -73,7 +73,30 @@ wss.on("connection", (ws) => {
     const data = JSON.parse(message.toString());
     console.debug(`message: ${JSON.stringify(data, null, 2)}`);
 
-    switch (data.type) {
+    const { type, ...payload } = data;
+
+    if (
+      ![
+        "joinGame",
+        "startGame",
+        "addDie",
+        "removeDie",
+        "rollDice",
+        "clearDice",
+      ].includes(type)
+    ) {
+      if (!gameInProgress) {
+        sendError(ws, "Game is not in progress");
+        return;
+      }
+
+      if (!("playerId" in ws)) {
+        sendError(ws, "Spectators can't perform this action");
+        return;
+      }
+    }
+
+    switch (type) {
       case "joinGame":
         if (gameInProgress) {
           sendError(ws, "Game is already in progress");
@@ -141,146 +164,46 @@ wss.on("connection", (ws) => {
         gameState.diceRolls = Array(gameState.numDice).fill(0);
         break;
       case "addFish":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't add cards");
-          return;
-        }
-
-        const newFish = getFish(data.location);
-        gameState.board.fish[data.location].push(newFish);
-        break;
-      case "removeFish":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't remove cards");
-          return;
-        }
-
-        gameState.board.fish[data.location].splice(data.idx, 1);
+        const newFish = getFish(payload.location);
+        gameState.board.fish[payload.location].push(newFish);
         break;
       case "drawFish":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't draw cards");
-          return;
-        }
-
-        const [drawnFish] = gameState.board.fish[data.location].splice(
-          data.idx,
+        const [drawnFish] = gameState.board.fish[payload.location].splice(
+          payload.idx,
           1,
         );
         gameState.players[ws.playerId].hand.push(drawnFish);
         gameState.players[ws.playerId].reputation += drawnFish.reputation;
         break;
-      case "discardFish":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't discard cards");
-          return;
-        }
-
-        gameState.players[ws.playerId].hand.splice(data.idx, 1);
+      case "removeFish":
+        gameState.board.fish[payload.location].splice(payload.idx, 1);
         break;
       case "sellFish":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't sell cards");
-          return;
-        }
-
         const [soldFish] = gameState.players[ws.playerId].hand.splice(
-          data.idx,
+          payload.idx,
           1,
         );
         gameState.players[ws.playerId].money += soldFish.money;
         break;
+      case "discardFish":
+        gameState.players[ws.playerId].hand.splice(payload.idx, 1);
+        break;
       case "addQuest":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't add quests");
-          return;
-        }
-
         const newQuest = getQuest();
         gameState.board.quests.push(newQuest);
         break;
-      case "removeQuest":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't remove quests");
-          return;
-        }
-
-        gameState.board.quests.splice(data.idx, 1);
-        break;
       case "drawQuest":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't draw quests");
-          return;
-        }
-
-        const [drawnQuest] = gameState.board.quests.splice(data.idx, 1);
+        const [drawnQuest] = gameState.board.quests.splice(payload.idx, 1);
         gameState.players[ws.playerId].quests.push(drawnQuest);
         break;
-      case "discardQuest":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't discard quests");
-          return;
-        }
-
-        gameState.players[ws.playerId].quests.splice(data.idx, 1);
+      case "removeQuest":
+        gameState.board.quests.splice(payload.idx, 1);
         break;
       case "sellQuest":
-        if (!gameInProgress) {
-          sendError(ws, "Game is not in progress");
-          return;
-        }
-
-        if (!("playerId" in ws)) {
-          sendError(ws, "Spectators can't sell quests");
-          return;
-        }
-
-        gameState.players[ws.playerId].quests.splice(data.idx, 1);
+        gameState.players[ws.playerId].quests.splice(payload.idx, 1);
+        break;
+      case "discardQuest":
+        gameState.players[ws.playerId].quests.splice(payload.idx, 1);
         break;
     }
     broadcast({ type: "gameState", gameState });
