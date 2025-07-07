@@ -1,4 +1,4 @@
-import { FaFish, FaMoneyBill, FaStar, FaCircleXmark } from "react-icons/fa6";
+import { FaCircleXmark, FaFish, FaMoneyBill, FaStar } from "react-icons/fa6";
 
 const capitalize = (str) =>
   str

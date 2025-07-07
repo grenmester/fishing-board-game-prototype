@@ -28,6 +28,7 @@ const getFish = (location) => {
 };
 
 let questDeck = structuredClone(gameData.quests);
+let gearDeck = structuredClone(gameData.gear);
 
 const getQuest = () => {
   if (questDeck.length === 0) {
@@ -37,6 +38,16 @@ const getQuest = () => {
   const randomIdx = Math.floor(Math.random() * questDeck.length);
   const [drawnQuest] = questDeck.splice(randomIdx, 1);
   return drawnQuest;
+};
+
+const getGear = () => {
+  if (gearDeck.length === 0) {
+    console.log("The gear deck is empty, refilling cards");
+    gearDeck = structuredClone(gameData.gear);
+  }
+  const randomIdx = Math.floor(Math.random() * gearDeck.length);
+  const [drawnGear] = gearDeck.splice(randomIdx, 1);
+  return drawnGear;
 };
 
 const broadcast = (message) => {
@@ -105,10 +116,13 @@ wss.on("connection", (ws) => {
 
         ws.playerId = gameState.players.length;
         gameState.players.push({
-          hand: [],
+          hand: {
+            fish: [],
+            quests: [],
+            gear: [],
+          },
           reputation: 0,
           money: 0,
-          quests: [],
         });
         ws.send(JSON.stringify({ type: "playerId", playerId: ws.playerId }));
         break;
@@ -135,6 +149,7 @@ wss.on("connection", (ws) => {
         gameState.board.quests = Array(5)
           .fill()
           .map(() => getQuest());
+        gameState.board.gear = [];
         broadcast({ type: "gameInProgress", gameInProgress });
         break;
       case "addDie":
@@ -172,21 +187,21 @@ wss.on("connection", (ws) => {
           payload.idx,
           1,
         );
-        gameState.players[ws.playerId].hand.push(drawnFish);
+        gameState.players[ws.playerId].hand.fish.push(drawnFish);
         gameState.players[ws.playerId].reputation += drawnFish.reputation;
         break;
       case "removeFish":
         gameState.board.fish[payload.location].splice(payload.idx, 1);
         break;
       case "sellFish":
-        const [soldFish] = gameState.players[ws.playerId].hand.splice(
+        const [soldFish] = gameState.players[ws.playerId].hand.fish.splice(
           payload.idx,
           1,
         );
         gameState.players[ws.playerId].money += soldFish.money;
         break;
       case "discardFish":
-        gameState.players[ws.playerId].hand.splice(payload.idx, 1);
+        gameState.players[ws.playerId].hand.fish.splice(payload.idx, 1);
         break;
       case "addQuest":
         const newQuest = getQuest();
@@ -194,16 +209,33 @@ wss.on("connection", (ws) => {
         break;
       case "drawQuest":
         const [drawnQuest] = gameState.board.quests.splice(payload.idx, 1);
-        gameState.players[ws.playerId].quests.push(drawnQuest);
+        gameState.players[ws.playerId].hand.quests.push(drawnQuest);
         break;
       case "removeQuest":
         gameState.board.quests.splice(payload.idx, 1);
         break;
       case "sellQuest":
-        gameState.players[ws.playerId].quests.splice(payload.idx, 1);
+        gameState.players[ws.playerId].hand.quests.splice(payload.idx, 1);
         break;
       case "discardQuest":
-        gameState.players[ws.playerId].quests.splice(payload.idx, 1);
+        gameState.players[ws.playerId].hand.quests.splice(payload.idx, 1);
+        break;
+      case "addGear":
+        const newGear = getGear();
+        gameState.board.gear.push(newGear);
+        break;
+      case "drawGear":
+        const [drawnGear] = gameState.board.gear.splice(payload.idx, 1);
+        gameState.players[ws.playerId].hand.gear.push(drawnGear);
+        break;
+      case "removeGear":
+        gameState.board.gear.splice(payload.idx, 1);
+        break;
+      case "sellGear":
+        gameState.players[ws.playerId].hand.gear.splice(payload.idx, 1);
+        break;
+      case "discardGear":
+        gameState.players[ws.playerId].hand.gear.splice(payload.idx, 1);
         break;
     }
     broadcast({ type: "gameState", gameState });

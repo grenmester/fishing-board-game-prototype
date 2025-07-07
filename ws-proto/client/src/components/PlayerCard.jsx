@@ -49,7 +49,7 @@ const PlayerCard = ({ idx, player, playerId }) => {
           </div>
           <div className="flex gap-1 items-center">
             <FaFish className="text-blue-500" />
-            <span>{player.hand.length}</span>
+            <span>{player.hand.fish.length}</span>
           </div>
         </div>
         <FaCircleUser size={48} />
@@ -59,7 +59,7 @@ const PlayerCard = ({ idx, player, playerId }) => {
         <div className="absolute top-40 left-1/2 z-10 p-4 bg-blue-100 rounded-lg ring-2 ring-blue-700 -translate-x-1/2 w-3xl">
           <h2 className="mb-4 text-xl font-bold text-center">Hand</h2>
           <div className="grid grid-cols-4 gap-4 justify-center mx-auto w-fit">
-            {player.hand.map((fish, idx) => (
+            {player.hand.fish.map((fish, idx) => (
               <FishCard fish={fish} key={`${fish.name}${idx}`} />
             ))}
           </div>

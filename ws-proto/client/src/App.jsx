@@ -12,6 +12,7 @@ import { IoMdAdd, IoMdClose, IoMdRemove, IoMdSync } from "react-icons/io";
 
 import DebugConsole from "./components/DebugConsole";
 import FishCard from "./components/FishCard";
+import GearCard from "./components/GearCard";
 import PlayerCard from "./components/PlayerCard";
 import QuestCard from "./components/QuestCard";
 
@@ -42,6 +43,7 @@ const App = () => {
     board: {
       fish: {},
       quests: [],
+      gear: [],
     },
   });
   const [error, setError] = useState("");
@@ -141,6 +143,29 @@ const App = () => {
             ))}
         </div>
       </div>
+      <div className="p-4 w-full max-w-7xl bg-green-100 rounded-xl">
+        <h2 className="mb-4 text-4xl font-bold text-center">Gear</h2>
+        <div className="flex flex-wrap gap-4 justify-center items-center">
+          <div className="flex flex-col items-center w-36">
+            <h3 className="mb-2 text-2xl font-bold text-center">Gear</h3>
+            <button
+              className="p-2 text-white bg-green-500 rounded-full hover:bg-green-700 size-fit"
+              onClick={() => sendMessage({ type: "addGear" })}
+            >
+              <IoMdAdd size={24} />
+            </button>
+          </div>
+          {gameState.board.gear &&
+            gameState.board.gear.map((gear, idx) => (
+              <GearCard
+                clickHandler={() => sendMessage({ type: "drawGear", idx })}
+                discardHandler={() => sendMessage({ type: "removeGear", idx })}
+                gear={gear}
+                key={`${gear.name}${idx}`}
+              />
+            ))}
+        </div>
+      </div>
       <div className="p-4 w-full max-w-7xl bg-cyan-100 rounded-xl">
         <h2 className="mb-4 text-4xl font-bold text-center">Fish</h2>
         <div className="flex flex-col gap-y-4">
@@ -178,8 +203,8 @@ const App = () => {
       <div className="p-4 w-full max-w-4xl bg-blue-100 rounded-xl">
         <h2 className="mb-4 text-4xl font-bold text-center">Hand</h2>
         <div className="flex flex-wrap gap-4 items-center">
-          {gameState.players[playerId]?.hand.length > 0 &&
-            gameState.players[playerId]?.hand.map((fish, idx) => (
+          {gameState.players[playerId]?.hand.fish.length > 0 &&
+            gameState.players[playerId]?.hand.fish.map((fish, idx) => (
               <FishCard
                 clickHandler={() => sendMessage({ type: "sellFish", idx })}
                 discardHandler={() => sendMessage({ type: "discardFish", idx })}
@@ -187,8 +212,8 @@ const App = () => {
                 key={`${fish.name}${idx}`}
               />
             ))}
-          {gameState.players[playerId]?.quests.length > 0 &&
-            gameState.players[playerId]?.quests.map((quest, idx) => (
+          {gameState.players[playerId]?.hand.quests.length > 0 &&
+            gameState.players[playerId]?.hand.quests.map((quest, idx) => (
               <QuestCard
                 clickHandler={() => sendMessage({ type: "sellQuest", idx })}
                 discardHandler={() =>
@@ -196,6 +221,15 @@ const App = () => {
                 }
                 quest={quest}
                 key={`${quest.name}${idx}`}
+              />
+            ))}
+          {gameState.players[playerId]?.hand.gear.length > 0 &&
+            gameState.players[playerId]?.hand.gear.map((gear, idx) => (
+              <GearCard
+                clickHandler={() => sendMessage({ type: "sellGear", idx })}
+                discardHandler={() => sendMessage({ type: "discardGear", idx })}
+                gear={gear}
+                key={`${gear.name}${idx}`}
               />
             ))}
         </div>

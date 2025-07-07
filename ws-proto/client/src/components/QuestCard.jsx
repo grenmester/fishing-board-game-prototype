@@ -1,4 +1,4 @@
-import { FaQuestion, FaCircleXmark } from "react-icons/fa6";
+import { FaCircleXmark, FaQuestion } from "react-icons/fa6";
 
 const QuestCard = ({ clickHandler, discardHandler, quest }) => (
   <div

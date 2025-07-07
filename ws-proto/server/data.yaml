@@ -49,7 +49,17 @@ fish:
     description: Roll a 2 and a 4
 
 quests:
-  - name: "Quest 1"
-    description: "Description 1"
-  - name: "Quest 2"
-    description: "Description 2"
+  - name: Quest 1
+    description: Description 1
+  - name: Quest 2
+    description: Description 2
+
+gear:
+  - name: Gear 1
+    type: rod
+    cost: 10
+    description: Description 1
+  - name: Gear 2
+    type: lure
+    cost: 20
+    description: Description 2
