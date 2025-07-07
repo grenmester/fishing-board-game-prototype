@@ -228,6 +228,12 @@ const App = () => {
             >
               <IoMdSync size={24} />
             </button>
+            <button
+              className="p-2 bg-gray-500 rounded-full"
+              onClick={() => sendMessage({ type: "clearDice" })}
+            >
+              <IoMdClose size={24} />
+            </button>
           </div>
         </div>
       </div>

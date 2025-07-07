@@ -137,6 +137,9 @@ wss.on("connection", (ws) => {
           .fill()
           .map(() => Math.floor(Math.random() * 6) + 1);
         break;
+      case "clearDice":
+        gameState.diceRolls = Array(gameState.numDice).fill(0);
+        break;
       case "addFish":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
