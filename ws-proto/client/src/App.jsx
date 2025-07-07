@@ -13,6 +13,7 @@ import { IoMdAdd, IoMdClose, IoMdRemove, IoMdSync } from "react-icons/io";
 import DebugConsole from "./components/DebugConsole";
 import FishCard from "./components/FishCard";
 import PlayerCard from "./components/PlayerCard";
+import QuestCard from "./components/QuestCard";
 
 const diceIcons = [
   GiSquare,
@@ -38,7 +39,10 @@ const App = () => {
     players: [],
     numDice: 1,
     diceRolls: [0],
-    board: {},
+    board: {
+      fish: {},
+      quests: [],
+    },
   });
   const [error, setError] = useState("");
 
@@ -114,10 +118,33 @@ const App = () => {
           ))}
         </div>
       </div>
+      <div className="p-4 w-full max-w-7xl bg-red-100 rounded-xl">
+        <h2 className="mb-4 text-4xl font-bold text-center">Quests</h2>
+        <div className="flex flex-wrap gap-4 justify-center items-center">
+          <div className="flex flex-col items-center w-36">
+            <h3 className="mb-2 text-2xl font-bold text-center">Quests</h3>
+            <button
+              className="p-2 text-white bg-red-500 rounded-full hover:bg-red-700 size-fit"
+              onClick={() => sendMessage({ type: "addQuest" })}
+            >
+              <IoMdAdd size={24} />
+            </button>
+          </div>
+          {gameState.board.quests &&
+            gameState.board.quests.map((quest, idx) => (
+              <QuestCard
+                clickHandler={() => sendMessage({ type: "drawQuest", idx })}
+                discardHandler={() => sendMessage({ type: "removeQuest", idx })}
+                quest={quest}
+                key={`${quest.name}${idx}`}
+              />
+            ))}
+        </div>
+      </div>
       <div className="p-4 w-full max-w-7xl bg-cyan-100 rounded-xl">
         <h2 className="mb-4 text-4xl font-bold text-center">Fish</h2>
         <div className="flex flex-col gap-y-4">
-          {Object.entries(gameState.board).map(([location, fishList]) => (
+          {Object.entries(gameState.board.fish).map(([location, fishList]) => (
             <div className="p-4 bg-cyan-200 rounded-lg" key={location}>
               <div className="flex flex-wrap gap-4 justify-center items-center">
                 <div className="flex flex-col items-center w-36">
@@ -125,8 +152,8 @@ const App = () => {
                     {capitalize(location)}
                   </h3>
                   <button
-                    className="p-2 text-white bg-cyan-500 rounded-full size-fit"
-                    onClick={() => sendMessage({ type: "addCard", location })}
+                    className="p-2 text-white bg-cyan-500 rounded-full hover:bg-cyan-700 size-fit"
+                    onClick={() => sendMessage({ type: "addFish", location })}
                   >
                     <IoMdAdd size={24} />
                   </button>
@@ -134,9 +161,11 @@ const App = () => {
                 {fishList.map((fish, idx) => (
                   <FishCard
                     clickHandler={() =>
-                      sendMessage({ type: "drawCard", location, idx })
+                      sendMessage({ type: "drawFish", location, idx })
                     }
-                    discardHandler={() => sendMessage({ type: "removeCard", location, idx})}
+                    discardHandler={() =>
+                      sendMessage({ type: "removeFish", location, idx })
+                    }
                     fish={fish}
                     key={`${fish.name}${idx}`}
                   />
@@ -152,10 +181,21 @@ const App = () => {
           {gameState.players[playerId]?.hand.length > 0 &&
             gameState.players[playerId]?.hand.map((fish, idx) => (
               <FishCard
-                clickHandler={() => sendMessage({ type: "sellCard", idx })}
-                discardHandler={() => sendMessage({ type: "discardCard", idx})}
+                clickHandler={() => sendMessage({ type: "sellFish", idx })}
+                discardHandler={() => sendMessage({ type: "discardFish", idx })}
                 fish={fish}
                 key={`${fish.name}${idx}`}
+              />
+            ))}
+          {gameState.players[playerId]?.quests.length > 0 &&
+            gameState.players[playerId]?.quests.map((quest, idx) => (
+              <QuestCard
+                clickHandler={() => sendMessage({ type: "sellQuest", idx })}
+                discardHandler={() =>
+                  sendMessage({ type: "discardQuest", idx })
+                }
+                quest={quest}
+                key={`${quest.name}${idx}`}
               />
             ))}
         </div>

@@ -9,12 +9,15 @@ const capitalize = (str) =>
 
 const FishCard = ({ clickHandler, discardHandler, fish }) => (
   <div
-    className="group relative flex flex-col items-center p-4 w-36 h-52 text-sm text-center bg-gray-300 rounded-lg hover:bg-gray-400"
+    className="flex relative flex-col items-center p-4 w-36 h-52 text-sm text-center bg-gray-300 rounded-lg hover:bg-gray-400 group"
     onClick={clickHandler}
   >
     <button
-      className="invisible group-hover:visible absolute -top-3 -right-3 text-gray-300 bg-gray-900 rounded-full hover:text-gray-400"
-      onClick={e => { discardHandler(); e.stopPropagation() }}
+      className="absolute -top-3 -right-3 invisible text-gray-300 bg-gray-900 rounded-full group-hover:visible hover:text-gray-400"
+      onClick={(e) => {
+        discardHandler();
+        e.stopPropagation();
+      }}
     >
       <FaCircleXmark size={32} />
     </button>
@@ -30,9 +33,9 @@ const FishCard = ({ clickHandler, discardHandler, fish }) => (
       </div>
     </div>
     <p className="mb-1 text-xs text-gray-500">{fish.category}</p>
-    <p className="h-10 font-bold text-lg/5">{fish.name}</p>
+    <p className="h-10 font-bold text-md/5">{fish.name}</p>
     <FaFish className="my-2" size={40} />
-    <p>{fish.description}</p>
+    <p className="italic">{fish.description}</p>
   </div>
 );
 

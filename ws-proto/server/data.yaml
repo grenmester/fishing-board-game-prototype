@@ -47,3 +47,9 @@ fish:
     size: 2
     color: silver
     description: Roll a 2 and a 4
+
+quests:
+  - name: "Quest 1"
+    description: "Description 1"
+  - name: "Quest 2"
+    description: "Description 2"

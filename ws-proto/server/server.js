@@ -27,6 +27,18 @@ const getFish = (location) => {
   return drawnFish;
 };
 
+let questDeck = structuredClone(gameData.quests);
+
+const getQuest = () => {
+  if (questDeck.length === 0) {
+    console.log("The quest deck is empty, refilling cards");
+    questDeck = structuredClone(gameData.quests);
+  }
+  const randomIdx = Math.floor(Math.random() * questDeck.length);
+  const [drawnQuest] = questDeck.splice(randomIdx, 1);
+  return drawnQuest;
+};
+
 const broadcast = (message) => {
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
@@ -46,7 +58,10 @@ let gameState = {
   players: [],
   numDice: 1,
   diceRolls: [0],
-  board: {},
+  board: {
+    fish: {},
+    quests: [],
+  },
 };
 
 wss.on("connection", (ws) => {
@@ -70,6 +85,7 @@ wss.on("connection", (ws) => {
           hand: [],
           reputation: 0,
           money: 0,
+          quests: [],
         });
         ws.send(JSON.stringify({ type: "playerId", playerId: ws.playerId }));
         break;
@@ -85,12 +101,17 @@ wss.on("connection", (ws) => {
           return;
         }
 
-        gameInProgress = true;
+        console.info("Loaded decks:");
         Object.keys(fishDeck).forEach((location) => {
-          gameState.board[location] = Array(5)
+          console.info(location, ": ", fishDeck[location].length, "cards");
+          gameState.board.fish[location] = Array(5)
             .fill()
             .map(() => getFish(location));
         });
+        gameInProgress = true;
+        gameState.board.quests = Array(5)
+          .fill()
+          .map(() => getQuest());
         broadcast({ type: "gameInProgress", gameInProgress });
         break;
       case "addDie":
@@ -116,7 +137,7 @@ wss.on("connection", (ws) => {
           .fill()
           .map(() => Math.floor(Math.random() * 6) + 1);
         break;
-      case "addCard":
+      case "addFish":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
           return;
@@ -128,9 +149,9 @@ wss.on("connection", (ws) => {
         }
 
         const newFish = getFish(data.location);
-        gameState.board[data.location].push(newFish);
+        gameState.board.fish[data.location].push(newFish);
         break;
-      case "removeCard":
+      case "removeFish":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
           return;
@@ -141,9 +162,9 @@ wss.on("connection", (ws) => {
           return;
         }
 
-        gameState.board[data.location].splice(data.idx, 1);
+        gameState.board.fish[data.location].splice(data.idx, 1);
         break;
-      case "drawCard":
+      case "drawFish":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
           return;
@@ -154,11 +175,14 @@ wss.on("connection", (ws) => {
           return;
         }
 
-        const [drawnFish] = gameState.board[data.location].splice(data.idx, 1);
+        const [drawnFish] = gameState.board.fish[data.location].splice(
+          data.idx,
+          1,
+        );
         gameState.players[ws.playerId].hand.push(drawnFish);
         gameState.players[ws.playerId].reputation += drawnFish.reputation;
         break;
-      case "discardCard":
+      case "discardFish":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
           return;
@@ -171,7 +195,7 @@ wss.on("connection", (ws) => {
 
         gameState.players[ws.playerId].hand.splice(data.idx, 1);
         break;
-      case "sellCard":
+      case "sellFish":
         if (!gameInProgress) {
           sendError(ws, "Game is not in progress");
           return;
@@ -187,6 +211,73 @@ wss.on("connection", (ws) => {
           1,
         );
         gameState.players[ws.playerId].money += soldFish.money;
+        break;
+      case "addQuest":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't add quests");
+          return;
+        }
+
+        const newQuest = getQuest();
+        gameState.board.quests.push(newQuest);
+        break;
+      case "removeQuest":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't remove quests");
+          return;
+        }
+
+        gameState.board.quests.splice(data.idx, 1);
+        break;
+      case "drawQuest":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't draw quests");
+          return;
+        }
+
+        const [drawnQuest] = gameState.board.quests.splice(data.idx, 1);
+        gameState.players[ws.playerId].quests.push(drawnQuest);
+        break;
+      case "discardQuest":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't discard quests");
+          return;
+        }
+
+        gameState.players[ws.playerId].quests.splice(data.idx, 1);
+        break;
+      case "sellQuest":
+        if (!gameInProgress) {
+          sendError(ws, "Game is not in progress");
+          return;
+        }
+
+        if (!("playerId" in ws)) {
+          sendError(ws, "Spectators can't sell quests");
+          return;
+        }
+
+        gameState.players[ws.playerId].quests.splice(data.idx, 1);
         break;
     }
     broadcast({ type: "gameState", gameState });
