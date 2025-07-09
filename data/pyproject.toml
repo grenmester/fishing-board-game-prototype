@@ -1,0 +1,13 @@
+[project]
+name = "data"
+version = "0.1.0"
+description = "Data and scripts for the fishing board game"
+readme = "../README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jupyterlab>=4.4.4",
+    "pandas>=2.3.1",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.4",
+    "tqdm>=4.67.1",
+]

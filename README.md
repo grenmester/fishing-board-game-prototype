@@ -58,21 +58,32 @@ pnpm dev
 
 ## Card Data and Analytics
 
-Card data can be found in the `data` directory. If you want to generate sample
-data to use in the game, run the Jupyter Notebook to generate the card data.
+Card data can be found in the `data` directory. It also contains some helper
+scripts. Install the dependencies to get started.
 
 ```sh
 cd data
-
-# create virtual environment and install jupyterlab
-python -m venv venv
-pip install jupyterlab
-./venv/bin/jupyter lab
+uv venv
+source .venv/bin/activate
+uv sync
 ```
 
-After running the notebook, you can find the generated data in
-`merged_output.yaml`.
+If you want to check out the data analysis, you can run the Jupyter Notebook.
 
 ```sh
-cp merged_output.yaml ../ws-proto/server/data.yaml
+.venv/bin/jupyter lab
+```
+
+If you want to generate sample data to use in the game, run the following
+script.
+
+```sh
+uv run generate_card_data.py
+```
+
+Overwrite the data file in the WebSocket prototype server to use the generated
+data in the game.
+
+```sh
+mv merged_output.yaml ../ws-proto/server/data.yaml
 ```
