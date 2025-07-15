@@ -14,8 +14,8 @@ def fetch_taxonomic_info(scientific_name):
         url = (
             f"https://api.gbif.org/v1/species/match?name={scientific_name}&rank=species"
         )
-        response = requests.get(url)
-        response.raise_for_status()  # Raise exception for bad status codes
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
         data = response.json()
         return {"family": data.get("family"), "order": data.get("order")}
     except requests.exceptions.RequestException as e:
@@ -31,7 +31,6 @@ def update_fish_data(input_path, output_path):
     fish_list = data.get("fishData", [])
 
     for fish in tqdm(fish_list):
-        # Only make API call if either field is missing
         if "scientificFamily" not in fish or "scientificOrder" not in fish:
             tax_info = fetch_taxonomic_info(fish["scientificName"])
             if tax_info:

@@ -1,6 +1,7 @@
 .ipynb_checkpoints/
 node_modules/
 
+data/fish_properties.yaml
 data/fish_table.md
 data/fish_tax_data.yaml
 data/merged_output.yaml
